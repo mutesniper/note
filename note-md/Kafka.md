@@ -240,11 +240,11 @@ spring:
 
 观察一下kafka插件显示的信息:
 
-hello-topic:<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 095121.png" alt="屏幕截图 2025-04-07 095121" style="zoom:75%;" />
+hello-topic:<img src="../assets/屏幕截图 2025-04-07 095121.png" alt="屏幕截图 2025-04-07 095121" style="zoom:75%;" />
 
-hello-group:<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 095126.png" alt="屏幕截图 2025-04-07 095126" style="zoom:75%;" />
+hello-group:<img src="../assets/屏幕截图 2025-04-07 095126.png" alt="屏幕截图 2025-04-07 095126" style="zoom:75%;" />
 
-hello-group-02:<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 095131.png" alt="屏幕截图 2025-04-07 095131" style="zoom:75%;" />
+hello-group-02:<img src="../assets/屏幕截图 2025-04-07 095131.png" alt="屏幕截图 2025-04-07 095131" style="zoom:75%;" />
 
 
 
@@ -353,7 +353,7 @@ public void sendEvent4() {
 
 
 
-send方法有6个重载的方法，上面仅讲了一部分<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 123635.png" alt="屏幕截图 2025-04-07 123635" style="zoom:75%;" />
+send方法有6个重载的方法，上面仅讲了一部分<img src="../assets/屏幕截图 2025-04-07 123635.png" alt="屏幕截图 2025-04-07 123635" style="zoom:75%;" />
 
 
 
@@ -378,7 +378,7 @@ spring:
 
 
 
-![屏幕截图 2025-04-07 124247](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 124247.png)
+![屏幕截图 2025-04-07 124247](../assets/屏幕截图 2025-04-07 124247.png)
 
 
 
@@ -386,19 +386,19 @@ spring:
 
 ### send和sendDefaut方法的区别
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 124433.png" alt="屏幕截图 2025-04-07 124433" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-07 124433.png" alt="屏幕截图 2025-04-07 124433" style="zoom: 50%;" />
 
 
 
 ### 获取生产者消息发送结果
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 124815.png" alt="屏幕截图 2025-04-07 124815" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-07 124815.png" alt="屏幕截图 2025-04-07 124815" style="zoom: 80%;" />
 
 为什么使用异步编程：
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 125048.png" alt="屏幕截图 2025-04-07 125048" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-07 125048.png" alt="屏幕截图 2025-04-07 125048" style="zoom:75%;" />
 
 
 
@@ -528,7 +528,7 @@ spring:
 
 #### leader副本的分配
 
-![屏幕截图 2025-04-10 213615](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-10 213615.png)
+![屏幕截图 2025-04-10 213615](../assets/屏幕截图 2025-04-10 213615.png)
 
 一般不建议开启`auto.leader.rebalance.enable`，如果要开启，建议将不平衡比例阈值增大。
 
@@ -680,7 +680,7 @@ props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, CustomPartitioner.class);
 
 ### 生产者发送消息的流程
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-07 222551.png" alt="屏幕截图 2025-04-07 222551" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-07 222551.png" alt="屏幕截图 2025-04-07 222551" style="zoom:75%;" />
 
 其中分区器的方法会执行两次，也就是上一章未解决的问题
 
@@ -1247,13 +1247,13 @@ public class EventConsumer {
 
 指的是Topic中哪些分区由哪些消费者来消费
 
-![屏幕截图 2025-04-08 231659](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-08 231659.png)
+![屏幕截图 2025-04-08 231659](../assets/屏幕截图 2025-04-08 231659.png)
 
 
 
 ##### 默认分区策略
 
-![屏幕截图 2025-04-08 234619](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-08 234619.png)
+![屏幕截图 2025-04-08 234619](../assets/屏幕截图 2025-04-08 234619.png)
 
 **不同的消费者组之间是相互独立的**，它们会各自独立地消费 Topic 中的所有分区消息。也就是说，一个消费者组内的消费者只会与该组内的其他消费者共享分区，而不会与其他消费者组发生冲突或竞争。
 
@@ -1372,7 +1372,7 @@ public class EventConsumer {
 
 ##### 两个sticky分区策略
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 130150.png" alt="屏幕截图 2025-04-09 130150" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-09 130150.png" alt="屏幕截图 2025-04-09 130150" style="zoom:75%;" />
 
 
 
@@ -1384,7 +1384,7 @@ public class EventConsumer {
 
 ### 消息的存储
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 131157.png" alt="屏幕截图 2025-04-09 131157" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-09 131157.png" alt="屏幕截图 2025-04-09 131157" style="zoom: 80%;" />
 
 这里我用的是docker启动的，存储的目录需要进入docker容器后，进入/tmp/kraft-combined-logs文件夹
 
@@ -1472,7 +1472,7 @@ kafka内部会为每条消息分配一个唯一的offset，该offset就是该消
 
 #### 手动offset
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-10 224132.png" alt="屏幕截图 2025-04-10 224132" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-10 224132.png" alt="屏幕截图 2025-04-10 224132" style="zoom: 50%;" />
 
 
 
@@ -1495,7 +1495,7 @@ kafkaConsumer.commitAsync();
 
 ## Kafka集群架构
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 172613.png" alt="屏幕截图 2025-04-09 172613"  />
+<img src="../assets/屏幕截图 2025-04-09 172613.png" alt="屏幕截图 2025-04-09 172613"  />
 
 副本个数不能为0，也不要能大于broker个数
 
@@ -1526,9 +1526,9 @@ kafkaConsumer.commitAsync();
 
 In-Sync Replicas 在同步中的副本，包含了Leader副本和所有与Leader副本保持同步的Follower副本。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 181220.png" alt="屏幕截图 2025-04-09 181220" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-09 181220.png" alt="屏幕截图 2025-04-09 181220" style="zoom:75%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 181615.png" alt="屏幕截图 2025-04-09 181615" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-09 181615.png" alt="屏幕截图 2025-04-09 181615" style="zoom:75%;" />
 
 
 
@@ -1546,20 +1546,20 @@ High Watermark  高水位值 ,  HW 是所有 **ISR 成员副本中最小的 LEO*
 
 ## 基于Kraft搭建kafka集群
 
-controller节点：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 192413.png" alt="屏幕截图 2025-04-09 192413" style="zoom: 67%;" />
+controller节点：<img src="../assets/屏幕截图 2025-04-09 192413.png" alt="屏幕截图 2025-04-09 192413" style="zoom: 67%;" />
 
 - **Broker 角色**：处理客户端请求（生产者和消费者的请求），负责存储和管理分区数据。
 - **Controller 角色**：负责管理集群的元数据（如主题、分区、副本分配等），协调分区的领导者选举和故障恢复。
 
 
 
-zookeeper搭建集群的controller选举方式：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 192520.png" alt="屏幕截图 2025-04-09 192520" style="zoom:75%;" />
+zookeeper搭建集群的controller选举方式：<img src="../assets/屏幕截图 2025-04-09 192520.png" alt="屏幕截图 2025-04-09 192520" style="zoom:75%;" />
 
 
 
 
 
-kraft搭建集群的controller选举方式：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-09 192528.png" alt="屏幕截图 2025-04-09 192528" style="zoom:80%;" />
+kraft搭建集群的controller选举方式：<img src="../assets/屏幕截图 2025-04-09 192528.png" alt="屏幕截图 2025-04-09 192528" style="zoom:80%;" />
 
 **kraft建议选举三个controller节点**
 
@@ -1672,7 +1672,7 @@ networks:
 - 一旦批次准备好，`RecordAccumulator` 会通知 Sender 线程，后者负责将批次发送到对应的 Kafka Broker。
 - 一旦批次成功发送并且收到确认（根据 `acks` 参数），`RecordAccumulator` 就会释放这部分内存，以便后续消息可以使用。
 
-![屏幕截图 2025-04-10 163457](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-10 163457.png)
+![屏幕截图 2025-04-10 163457](../assets/屏幕截图 2025-04-10 163457.png)
 
 
 
@@ -1836,7 +1836,7 @@ props.put(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG,"30000");
 
 ### 数据重复（含生产者事务）
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-10 185857.png" alt="屏幕截图 2025-04-10 185857" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-10 185857.png" alt="屏幕截图 2025-04-10 185857" style="zoom: 50%;" />
 
 如何实现精确一次？
 
@@ -1886,7 +1886,7 @@ props.put(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG,"30000");
 
   - 这样，即使生产者实例发生了变化，事务的状态仍然可以通过 TID 和 PID 的绑定关系得以恢复。
 
-    <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-10 191909.png" alt="屏幕截图 2025-04-10 191909" style="zoom:75%;" />
+    <img src="../assets/屏幕截图 2025-04-10 191909.png" alt="屏幕截图 2025-04-10 191909" style="zoom:75%;" />
 
     （上图只需要看1-9过程）
 
@@ -2026,7 +2026,7 @@ Kafka 的 `Selector` 是对 Java NIO 的封装，其内部使用了以下几个�
 
 ## *高效读写数据
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-10 214741.png" alt="屏幕截图 2025-04-10 214741" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-10 214741.png" alt="屏幕截图 2025-04-10 214741" style="zoom:75%;" />
 
 采用零拷贝(sendfile):
 
@@ -2076,7 +2076,7 @@ Kafka 实现了部分零拷贝功能，主要是通过利用操作系统提供�
 
 ### 消费者组消费流程
 
-![屏幕截图 2025-04-10 222733](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-10 222733.png)
+![屏幕截图 2025-04-10 222733](../assets/屏幕截图 2025-04-10 222733.png)
 
 
 

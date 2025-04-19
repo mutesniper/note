@@ -2,7 +2,7 @@
 
 ## NoSQL
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 094419.png" alt="屏幕截图 2025-04-11 094419" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-11 094419.png" alt="屏幕截图 2025-04-11 094419" style="zoom: 67%;" />
 
 - 数据结构：SQL可以使用字段、约束保持结构化；NoSQL根据不同类型的数据库有不同的结构
 
@@ -30,7 +30,7 @@
 
 Remote Dictionary Server，远程词典服务，是一个基于内存的**键值型NoSQL数据库**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 100312.png" alt="屏幕截图 2025-04-11 100312" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-11 100312.png" alt="屏幕截图 2025-04-11 100312" style="zoom:75%;" />
 
 
 
@@ -182,7 +182,7 @@ redis-cli [options] [commonds]
 
 不指定commond时，会进入`redis-cli`的交互控制台：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 112703.png" alt="屏幕截图 2025-04-11 112703" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-11 112703.png" alt="屏幕截图 2025-04-11 112703" style="zoom:75%;" />
 
 
 
@@ -192,7 +192,7 @@ redis-cli [options] [commonds]
 
 # Redis命令
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 113625.png" alt="屏幕截图 2025-04-11 113625" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-11 113625.png" alt="屏幕截图 2025-04-11 113625" style="zoom: 50%;" />
 
 
 
@@ -252,13 +252,13 @@ String可以分为三类：
 
 ## Key的层级格式
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 140003.png" alt="屏幕截图 2025-04-11 140003" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-11 140003.png" alt="屏幕截图 2025-04-11 140003" style="zoom: 67%;" />
 
 采用这种命名方式，在图形化客户端中会自动生成包结构（命令行中不会）
 
 ## Hash类型
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 140316.png" alt="屏幕截图 2025-04-11 140316" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-11 140316.png" alt="屏幕截图 2025-04-11 140316" style="zoom: 80%;" />
 
 
 
@@ -284,7 +284,7 @@ String可以分为三类：
 
 ## List类型
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 152043.png" alt="屏幕截图 2025-04-11 152043" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-11 152043.png" alt="屏幕截图 2025-04-11 152043" style="zoom: 67%;" />
 
 
 
@@ -304,7 +304,7 @@ String可以分为三类：
 
 ## Set类型
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 153611.png" alt="屏幕截图 2025-04-11 153611" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-11 153611.png" alt="屏幕截图 2025-04-11 153611" style="zoom:75%;" />
 
 `sadd k member...`：向set中添加一个或多个元素
 `srem k member...`：移除
@@ -326,7 +326,7 @@ String可以分为三类：
 
 ## SortedSet类型
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-11 154631.png" alt="屏幕截图 2025-04-11 154631" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-11 154631.png" alt="屏幕截图 2025-04-11 154631" style="zoom:75%;" />
 
 `zadd key score member`:添加一个或多个元素到sortedset，如果已经存在，覆盖其score值。**添加数据会自动排序**
 
@@ -461,9 +461,9 @@ public class JedisConnectionFactory {
 
 ## SpringDataRedis
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 111612.png" alt="屏幕截图 2025-04-12 111612" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-12 111612.png" alt="屏幕截图 2025-04-12 111612" style="zoom: 50%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 111911.png" alt="屏幕截图 2025-04-12 111911" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 111911.png" alt="屏幕截图 2025-04-12 111911" style="zoom: 67%;" />
 
 
 
@@ -574,7 +574,7 @@ RedisTemplate<String,Object> redisTemplate;
 
 ### *StringRedisTemplate
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 125931.png" alt="屏幕截图 2025-04-12 125931" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 125931.png" alt="屏幕截图 2025-04-12 125931" style="zoom: 67%;" />
 
 为了节省内存空间，我们并不会使用JSON序列化器来处理value，而是统一使用String序列化器，要求只能存储String类型的key和value。而当需要存储java对象时，手动完成对象的序列化和反序列化。
 
@@ -635,7 +635,7 @@ stringRedisTemplate.opsForHash().putAll("login:token:"+token,userMap);
 
 缓存就是数据交换的缓冲区（cache），是存贮数据的临时地方，一般读写性能较高。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 194005.png" alt="屏幕截图 2025-04-12 194005" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-12 194005.png" alt="屏幕截图 2025-04-12 194005" style="zoom: 50%;" />
 
 （还不止上图这么多）
 
@@ -654,14 +654,14 @@ stringRedisTemplate.opsForHash().putAll("login:token:"+token,userMap);
 
 
 
-缓存作用模型:<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 194532.png" alt="屏幕截图 2025-04-12 194532" style="zoom: 67%;" />
+缓存作用模型:<img src="../assets/屏幕截图 2025-04-12 194532.png" alt="屏幕截图 2025-04-12 194532" style="zoom: 67%;" />
 
 
 
 ### 代码演示
 
 以商户数据查询为例：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 194739.png" alt="屏幕截图 2025-04-12 194739" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 194739.png" alt="屏幕截图 2025-04-12 194739" style="zoom: 67%;" />
 
 
 
@@ -707,14 +707,14 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 200557.png" alt="屏幕截图 2025-04-12 200557" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-12 200557.png" alt="屏幕截图 2025-04-12 200557" style="zoom: 50%;" />
 
 
 
 #### 主动更新策略（问题待解决）
 
 主要的三种策略：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 200952.png" alt="屏幕截图 2025-04-12 200952" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 200952.png" alt="屏幕截图 2025-04-12 200952" style="zoom: 67%;" />
 
 第三种方法效率高（因为每隔一段时间检查缓存有没有变化，所以假如在一段时间内缓存变化了n次，但是只要向数据库更新最后一次就行了）。但是一致性和可靠性较差（如果宕机，内存中的更新数据会丢失）
 
@@ -724,10 +724,10 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 
 采用第一种方式有三个问题需要考虑：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 203258.png" alt="屏幕截图 2025-04-12 203258" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 203258.png" alt="屏幕截图 2025-04-12 203258" style="zoom: 67%;" />
 
 其中，在第三个问题中，两个方案在多线程下都有可能出现问题：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 203351.png" alt="屏幕截图 2025-04-12 203351" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 203351.png" alt="屏幕截图 2025-04-12 203351" style="zoom: 67%;" />
 
 又因为缓存操作比数据库操作快得多，所以方案二出错概率小。
 
@@ -737,7 +737,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 
 #### 总结：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 204712.png" alt="屏幕截图 2025-04-12 204712" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 204712.png" alt="屏幕截图 2025-04-12 204712" style="zoom: 67%;" />
 
 所以，在 【代码演示】中，可以给第六步加上TTL，并在service层的update方法中先操作数据库，再删缓存。
 
@@ -758,7 +758,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
   - 额外内存消耗
   - 可能造成短期数据不一致（即使设置了ttl，数据库在这段时间内更新了，但内存仍是null）
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 211519.png" alt="屏幕截图 2025-04-12 211519" style="zoom: 50%;" />
+  <img src="../assets/屏幕截图 2025-04-12 211519.png" alt="屏幕截图 2025-04-12 211519" style="zoom: 50%;" />
 
 - 布隆过滤器：
 
@@ -782,7 +782,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
   - **存在误报率**：布隆过滤器可能会错误地认为一个不在集合中的元素存在于集合中，但不会漏报（即将存在的元素报告为不存在）。
   - **无法删除元素**：由于多个元素可能共享同一个位，因此不能简单地通过将位重置为 0 来实现删除操作。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 211126.png" alt="屏幕截图 2025-04-12 211126" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-12 211126.png" alt="屏幕截图 2025-04-12 211126" style="zoom:75%;" />
 
 ​	布隆过滤器优点：内存占用少，没有多余key
 
@@ -804,17 +804,17 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 
 ### 缓存雪崩
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 212508.png" alt="屏幕截图 2025-04-12 212508" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 212508.png" alt="屏幕截图 2025-04-12 212508" style="zoom: 67%;" />
 
 
 
 ### 缓存击穿（热点key问题）
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 213138.png" alt="屏幕截图 2025-04-12 213138" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-12 213138.png" alt="屏幕截图 2025-04-12 213138" style="zoom: 50%;" />
 
 互斥锁：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 213318.png" alt="屏幕截图 2025-04-12 213318" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 213318.png" alt="屏幕截图 2025-04-12 213318" style="zoom: 67%;" />
 
 分布式锁：
 
@@ -836,11 +836,11 @@ public void unlock(String key) {
 逻辑过期：
 
 不设置显式的ttl了，而是将ttl作为键值对存储，查询时再进行判断是否过期。
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 213718.png" alt="屏幕截图 2025-04-12 213718" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-12 213718.png" alt="屏幕截图 2025-04-12 213718" style="zoom: 67%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-12 213903.png" alt="屏幕截图 2025-04-12 213903" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-12 213903.png" alt="屏幕截图 2025-04-12 213903" style="zoom: 50%;" />
 
 需要根据需求（一致性还是可用性）进行选择。**（CAP定理）**
 
@@ -850,7 +850,7 @@ public void unlock(String key) {
 
 需求：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 090516.png" alt="屏幕截图 2025-04-13 090516" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-13 090516.png" alt="屏幕截图 2025-04-13 090516" style="zoom: 67%;" />
 
 带有逻辑过期参数的类:
 
@@ -984,7 +984,7 @@ public class CacheClient {
 
 关注推送也叫做Feed流。即用户可以通过无限下拉获取新的信息。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 083214.png" alt="屏幕截图 2025-04-14 083214" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-14 083214.png" alt="屏幕截图 2025-04-14 083214" style="zoom: 50%;" />
 
 timeline的模式有三种：
 
@@ -1012,7 +1012,7 @@ timeline的模式有三种：
 
   粉丝量多的用户，再把粉丝进行分类。活跃粉丝采用推模式，普通粉丝采用拉模式。
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 084558.png" alt="屏幕截图 2025-04-14 084558" style="zoom: 50%;" />
+  <img src="../assets/屏幕截图 2025-04-14 084558.png" alt="屏幕截图 2025-04-14 084558" style="zoom: 50%;" />
 
   
 
@@ -1099,11 +1099,11 @@ BitMap应用场景：
 
 ## HyperLogLog(HLL)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 132147.png" alt="屏幕截图 2025-04-14 132147" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-14 132147.png" alt="屏幕截图 2025-04-14 132147" style="zoom: 50%;" />
 
 这时就需要用到HLL
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 132426.png" alt="屏幕截图 2025-04-14 132426" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-14 132426.png" alt="屏幕截图 2025-04-14 132426" style="zoom:50%;" />
 
 `pfadd key element...`：添加一或多个元素
 
@@ -1126,13 +1126,13 @@ BitMap应用场景：
 - 如果没有修改则认为是安全的，自己才更新数据
 - 如果已经被其他线程修改说明发生了线程安全问题，此时可以重试或异常。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 111417.png" alt="屏幕截图 2025-04-13 111417" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-13 111417.png" alt="屏幕截图 2025-04-13 111417" style="zoom: 50%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 111456.png" alt="屏幕截图 2025-04-13 111456" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-13 111456.png" alt="屏幕截图 2025-04-13 111456" style="zoom:50%;" />
 
 但是在实际情况中，可能根据业务需求进行修改。比如CAS法中即使stock被修改了，但是只要大于0，那么其他线程还是可以对其进行操作的。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 112811.png" alt="屏幕截图 2025-04-13 112811" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-13 112811.png" alt="屏幕截图 2025-04-13 112811" style="zoom:67%;" />
 
 # 分布式锁
 
@@ -1148,7 +1148,7 @@ BitMap应用场景：
 
 满足分布式系统或集群模式下多进程可见并且互斥的锁。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 115906.png" alt="屏幕截图 2025-04-13 115906" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-13 115906.png" alt="屏幕截图 2025-04-13 115906" style="zoom: 50%;" />
 
 
 
@@ -1160,7 +1160,7 @@ BitMap应用场景：
 
 并且获取失败会有两种设置：阻塞式和非阻塞式。阻塞式会一直等到锁被释放，非阻塞式会立即结束并返回一个结果。在这里采用非阻塞式。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 141044.png" alt="屏幕截图 2025-04-13 141044" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-13 141044.png" alt="屏幕截图 2025-04-13 141044" style="zoom: 67%;" />
 
 先来简单实现一下：
 
@@ -1274,11 +1274,11 @@ public void unlock() {
 
 Redis提供了Lua脚本功能，在一个Lua脚本中编写多条redis命令，确保多条命令执行时的原子性。( Lua是一种编程语言。)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 151204.png" alt="屏幕截图 2025-04-13 151204" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-13 151204.png" alt="屏幕截图 2025-04-13 151204" style="zoom:75%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 151558.png" alt="屏幕截图 2025-04-13 151558" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-13 151558.png" alt="屏幕截图 2025-04-13 151558" style="zoom: 50%;" />
 
 **注意：lua中的下标从1开始**
 
@@ -1440,17 +1440,17 @@ try{
 
 锁存储结构：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 180921.png" alt="屏幕截图 2025-04-13 180921" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-13 180921.png" alt="屏幕截图 2025-04-13 180921" style="zoom:75%;" />
 
 key是我们为锁指定的名字，field标记了线程，value：使用计数器原理记录进入了几层锁。
 
 举例：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 173349.png" alt="屏幕截图 2025-04-13 173349" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-13 173349.png" alt="屏幕截图 2025-04-13 173349" style="zoom:75%;" />
 
 在以上的例子中，使用RLock是可以重入锁的，怎么实现的？
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 172821.png" alt="屏幕截图 2025-04-13 172821" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-13 172821.png" alt="屏幕截图 2025-04-13 172821" style="zoom:75%;" />
 
 
 
@@ -1458,9 +1458,9 @@ key是我们为锁指定的名字，field标记了线程，value：使用计数�
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 171523.png" alt="屏幕截图 2025-04-13 171523" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-13 171523.png" alt="屏幕截图 2025-04-13 171523" style="zoom: 67%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 171543.png" alt="屏幕截图 2025-04-13 171543" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-13 171543.png" alt="屏幕截图 2025-04-13 171543" style="zoom: 67%;" />
 
 如果在第二层锁释放时发现所已经不是自己的了，那么第一层锁接下来的代码还是会执行，会造成线程安全问题。这里要用到续约机制：
 
@@ -1473,13 +1473,13 @@ key是我们为锁指定的名字，field标记了线程，value：使用计数�
 
 https://www.bilibili.com/video/BV1cr4y1671t?p=67&vd_source=c054be8430afebb3d00e5f2d0b77f9fc
 
-![屏幕截图 2025-04-13 183822](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 183822.png)
+![屏幕截图 2025-04-13 183822](../assets/屏幕截图 2025-04-13 183822.png)
 
 左边是获取锁，右边是释放锁。其中watchdog用来续约。
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 184243.png" alt="屏幕截图 2025-04-13 184243" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-13 184243.png" alt="屏幕截图 2025-04-13 184243" style="zoom: 67%;" />
 
 
 
@@ -1506,7 +1506,7 @@ lock=redissonClient.getMultiLock(lock1,lock2,lock3);
 
 总结：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-13 203931.png" alt="屏幕截图 2025-04-13 203931" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-13 203931.png" alt="屏幕截图 2025-04-13 203931" style="zoom: 50%;" />
 
 
 
@@ -1583,7 +1583,7 @@ CONFIG GET save
 
 
 
-其他配置：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 152626.png" alt="屏幕截图 2025-04-14 152626" style="zoom:50%;" />
+其他配置：<img src="../assets/屏幕截图 2025-04-14 152626.png" alt="屏幕截图 2025-04-14 152626" style="zoom:50%;" />
 
 
 
@@ -1675,7 +1675,7 @@ AOF默认是关闭的，需要修改redis.conf配置文件来开启：
 `appendfilename "xxx.aof"`
 
 AOF的记录命令频率也可以通过配置文件配置：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 161148.png" alt="屏幕截图 2025-04-14 161148" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-14 161148.png" alt="屏幕截图 2025-04-14 161148" style="zoom: 50%;" />
 
 
 
@@ -1685,19 +1685,19 @@ AOF的记录命令频率也可以通过配置文件配置：
 
 通过执行`bgrewriteaof`命令，可以让AOF文件执行重写功能，用最少的命令达到同样的效果。
 
-这条命令的自动执行条件：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 161559.png" alt="屏幕截图 2025-04-14 161559" style="zoom: 67%;" />
+这条命令的自动执行条件：<img src="../assets/屏幕截图 2025-04-14 161559.png" alt="屏幕截图 2025-04-14 161559" style="zoom: 67%;" />
 
 
 
 ### RDB和AOF对比
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 162005.png" alt="屏幕截图 2025-04-14 162005" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-14 162005.png" alt="屏幕截图 2025-04-14 162005" style="zoom: 50%;" />
 
 
 
 ## 主从
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 162314.png" alt="屏幕截图 2025-04-14 162314" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-14 162314.png" alt="屏幕截图 2025-04-14 162314" style="zoom: 50%;" />
 
 ### 搭建主从集群
 
@@ -1754,7 +1754,7 @@ CONFIG SET masterauth <主节点密码>
 ### 数据同步原理
 
 #### 全量同步(sync)
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 171742.png" alt="屏幕截图 2025-04-14 171742" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-14 171742.png" alt="屏幕截图 2025-04-14 171742" style="zoom: 50%;" />
 
 这个过程是比较慢的。
 
@@ -1771,14 +1771,14 @@ master如何判断slave是不是第一次来同步数据？两个重要概念：
 
 --------------------------------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 172943.png" alt="屏幕截图 2025-04-14 172943" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-14 172943.png" alt="屏幕截图 2025-04-14 172943" style="zoom:67%;" />
 
 流程总结：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 173233.png" alt="屏幕截图 2025-04-14 173233" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-14 173233.png" alt="屏幕截图 2025-04-14 173233" style="zoom:67%;" />
 
 #### 增量同步(psync)
 
-![屏幕截图 2025-04-14 175126](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 175126.png)
+![屏幕截图 2025-04-14 175126](../assets/屏幕截图 2025-04-14 175126.png)
 
 
 
@@ -1795,7 +1795,7 @@ master如何判断slave是不是第一次来同步数据？两个重要概念：
 
 #### 总结
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 180033.png" alt="屏幕截图 2025-04-14 180033" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-14 180033.png" alt="屏幕截图 2025-04-14 180033" style="zoom: 67%;" />
 
 
 
@@ -1803,7 +1803,7 @@ master如何判断slave是不是第一次来同步数据？两个重要概念：
 
 ### 哨兵作用和工作原理
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 180526.png" alt="屏幕截图 2025-04-14 180526" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-14 180526.png" alt="屏幕截图 2025-04-14 180526" style="zoom: 67%;" />
 
 Sentinel基于心跳机制监测服务状态，每隔一秒向集群的每个实例发送ping命令：
 
@@ -1813,12 +1813,12 @@ Sentinel基于心跳机制监测服务状态，每隔一秒向集群的每个实
 
 
 一旦发现master故障，sentinel需要在slave中选择一个作为新的master（sentinel也会选取出一个领导者执行此操作），依据：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 182514.png" alt="屏幕截图 2025-04-14 182514" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-14 182514.png" alt="屏幕截图 2025-04-14 182514" style="zoom: 67%;" />
 
 
 
 选举slave成为master的步骤如下：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 182710.png" alt="屏幕截图 2025-04-14 182710" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-14 182710.png" alt="屏幕截图 2025-04-14 182710" style="zoom: 67%;" />
 
 
 
@@ -2120,7 +2120,7 @@ redis-cli -c -p 7001
 
 redis会根据key的有效部分计算插槽值，分两种情况：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-14 230251.png" alt="屏幕截图 2025-04-14 230251" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-14 230251.png" alt="屏幕截图 2025-04-14 230251" style="zoom: 50%;" />
 
 当访问不在本节点的插槽存储的key时，会进行路由，转到正确的节点上查询数据。
 
@@ -2146,7 +2146,7 @@ redis-cli --cluster提供了很多操作集群的命令，可以通过下面的�
 
 
 
-操作举例：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 123629.png" alt="屏幕截图 2025-04-15 123629" style="zoom:50%;" />
+操作举例：<img src="../assets/屏幕截图 2025-04-15 123629.png" alt="屏幕截图 2025-04-15 123629" style="zoom:50%;" />
 
 添加过程很简单，但是添加过后7004中是没有插槽的。那么num原本是属于7001的插槽的，如何将插槽分配给7004？
 
@@ -2164,7 +2164,7 @@ redis-cli --cluster提供了很多操作集群的命令，可以通过下面的�
 
 当集群中一个master节点发生宕机：
 
-![屏幕截图 2025-04-15 131553](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 131553.png)
+![屏幕截图 2025-04-15 131553](../assets/屏幕截图 2025-04-15 131553.png)
 
 
 
@@ -2172,7 +2172,7 @@ redis-cli --cluster提供了很多操作集群的命令，可以通过下面的�
 
 为什么要进行手动故障转移：比如机器7001需要升级，就需要开启一个节点成为7001的slave，然后进行故障转移，而7001会变成该节点的slave，可以让7001下线去进行升级。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 132625.png" alt="屏幕截图 2025-04-15 132625" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-15 132625.png" alt="屏幕截图 2025-04-15 132625" style="zoom: 67%;" />
 
 
 
@@ -2180,7 +2180,7 @@ redis-cli --cluster提供了很多操作集群的命令，可以通过下面的�
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 133708.png" alt="屏幕截图 2025-04-15 133708" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-15 133708.png" alt="屏幕截图 2025-04-15 133708" style="zoom: 67%;" />
 
 
 
@@ -2199,7 +2199,7 @@ redis-cli --cluster提供了很多操作集群的命令，可以通过下面的�
 
 多级缓存就是充分利用请求处理的每个环节，分别添加缓存，减轻tomcat压力，提升服务性能。
 
-![屏幕截图 2025-04-15 135257](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 135257.png)
+![屏幕截图 2025-04-15 135257](../assets/屏幕截图 2025-04-15 135257.png)
 
 其中redis、tomcat、mysql也都可以部署成集群。
 
@@ -2231,17 +2231,17 @@ start nginx.exe
 
 打开控制台，可以看到页面有发起ajax查询数据。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 185529.png" alt="屏幕截图 2025-04-15 185529" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-15 185529.png" alt="屏幕截图 2025-04-15 185529" style="zoom:75%;" />
 
 这个请求地址是80端口，所以被当前的nginx反向代理了。
 
 查看nginx的conf目录下的nginx.conf文件：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 185606.png" alt="屏幕截图 2025-04-15 185606" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-15 185606.png" alt="屏幕截图 2025-04-15 185606" style="zoom: 50%;" />
 
 其中的192.168.150.101是我的虚拟机IP，也就是我的Nginx业务集群要部署的地方：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 185612.png" alt="屏幕截图 2025-04-15 185612" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-15 185612.png" alt="屏幕截图 2025-04-15 185612" style="zoom: 67%;" />
 
 
 
@@ -2354,7 +2354,7 @@ void testBasicOps() {
 
 ### 实现进程缓存
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 195836.png" alt="屏幕截图 2025-04-15 195836" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-15 195836.png" alt="屏幕截图 2025-04-15 195836" style="zoom: 67%;" />
 
 提前将bean定义好：
 
@@ -2421,7 +2421,7 @@ public ItemStock findStockById(@PathVariable("id") Long id){
 
 #### 初始lua
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 202403.png" alt="屏幕截图 2025-04-15 202403" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-15 202403.png" alt="屏幕截图 2025-04-15 202403" style="zoom:75%;" />
 
 linux运行lua：
 
@@ -2433,12 +2433,12 @@ linux运行lua：
 
 数据类型：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 202942.png" alt="屏幕截图 2025-04-15 202942" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-15 202942.png" alt="屏幕截图 2025-04-15 202942" style="zoom: 50%;" />
 
 
 
 变量：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 203205.png" alt="屏幕截图 2025-04-15 203205" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-15 203205.png" alt="屏幕截图 2025-04-15 203205" style="zoom: 50%;" />
 
 数组其实也是table的一种，key为数字，数组下标从1开始。
 
@@ -2451,7 +2451,7 @@ local声名的是局部变量，不加local则为全局变量。
 
 
 循环：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 203605.png" alt="屏幕截图 2025-04-15 203605" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-15 203605.png" alt="屏幕截图 2025-04-15 203605" style="zoom:50%;" />
 
 其中for后面跟的是变量名，前者为key，后者为value。
 
@@ -2463,11 +2463,11 @@ ipairs表示解析数组，pairs表示解析table。
 
 函数：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 205613.png" alt="屏幕截图 2025-04-15 205613" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-15 205613.png" alt="屏幕截图 2025-04-15 205613" style="zoom: 67%;" />
 
 条件控制：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 210110.png" alt="屏幕截图 2025-04-15 210110" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-15 210110.png" alt="屏幕截图 2025-04-15 210110" style="zoom: 50%;" />
 
 
 
@@ -2503,7 +2503,7 @@ end
 
 #### 安装
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 214222.png" alt="屏幕截图 2025-04-15 214222" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-15 214222.png" alt="屏幕截图 2025-04-15 214222" style="zoom: 67%;" />
 
 安装及配置:
 
@@ -2523,7 +2523,7 @@ end
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 220743.png" alt="屏幕截图 2025-04-15 220743" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-15 220743.png" alt="屏幕截图 2025-04-15 220743" style="zoom:67%;" />
 
 ```bash
 #user  nobody;
@@ -2566,7 +2566,7 @@ http {
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-15 220908.png" alt="屏幕截图 2025-04-15 220908" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-15 220908.png" alt="屏幕截图 2025-04-15 220908" style="zoom:67%;" />
 
 ```lua
 ngx.say('{"id":10001,"name":"SALSA AIR","title":"RIMOWA 26寸托运箱拉杆箱 SALSA AIR系列果绿色 820.70.36.4","price":19900,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t6934/364/1195375010/84676/e9f2c55f/597ece38N0ddcbc77.jpg!q70.jpg.webp","category":"拉杆箱","brand":"RIMOWA","spec":"","status":1,"createTime":"2019-04-30T16:00:00.000+00:00","updateTime":"2019-04-30T16:00:00.000+00:00","stock":2999,"sold":31290}')
@@ -2580,7 +2580,7 @@ ngx.say('{"id":10001,"name":"SALSA AIR","title":"RIMOWA 26寸托运箱拉杆箱 
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 110540.png" alt="屏幕截图 2025-04-16 110540" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 110540.png" alt="屏幕截图 2025-04-16 110540" style="zoom: 67%;" />
 
 
 
@@ -2682,7 +2682,7 @@ ngx.say(cjson.encode(item))
 
 tomcat如果按集群部署，那么linux上nginx的配置就要修改：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 125608.png" alt="屏幕截图 2025-04-16 125608" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 125608.png" alt="屏幕截图 2025-04-16 125608" style="zoom:67%;" />
 
 这样nginx会自动对tomcat进行轮询的负载均衡。
 
@@ -2690,7 +2690,7 @@ tomcat如果按集群部署，那么linux上nginx的配置就要修改：
 
 但是由于是本地缓存，每个tomcat无法共享缓存，如果进行轮询，在每次访问同一页面，可能不是同一个tomcat，这样就会产生冗余的缓存。
 
-所以我们要将同一个请求指向同一个tomcat服务器（在这里就是查询同一个id的商品时应该查询同一个tomcat服务器）。即修改nginx的负载均衡算法。 <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 130816.png" alt="屏幕截图 2025-04-16 130816" style="zoom:67%;" />
+所以我们要将同一个请求指向同一个tomcat服务器（在这里就是查询同一个id的商品时应该查询同一个tomcat服务器）。即修改nginx的负载均衡算法。 <img src="../assets/屏幕截图 2025-04-16 130816.png" alt="屏幕截图 2025-04-16 130816" style="zoom:67%;" />
 
 
 
@@ -2702,11 +2702,11 @@ tomcat如果按集群部署，那么linux上nginx的配置就要修改：
 
 ### Redis缓存预热
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 133516.png" alt="屏幕截图 2025-04-16 133516" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 133516.png" alt="屏幕截图 2025-04-16 133516" style="zoom: 50%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 135452.png" alt="屏幕截图 2025-04-16 135452" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 135452.png" alt="屏幕截图 2025-04-16 135452" style="zoom: 67%;" />
 
 初始化类：
 
@@ -2859,7 +2859,7 @@ OpenResty提供了操作Redis的模块，我们只要引入改模块就能直接
 
 ## Nginx本地缓存(2)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 144820.png" alt="屏幕截图 2025-04-16 144820" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 144820.png" alt="屏幕截图 2025-04-16 144820" style="zoom:67%;" />
 
 OpenResty为Nginx提供了shared dict功能，可以在nginx的多个worker之间共享数据，实现缓存功能。
 
@@ -2879,7 +2879,7 @@ OpenResty为Nginx提供了shared dict功能，可以在nginx的多个worker之�
 
 下面，修改逻辑：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 145505.png" alt="屏幕截图 2025-04-16 145505" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 145505.png" alt="屏幕截图 2025-04-16 145505" style="zoom:67%;" />
 
 
 
@@ -2924,17 +2924,17 @@ local stockJSON=read_data("item:stock:id:" .. id,60,"/item/stock/" .. id,nil)
 
 ### 数据同步策略
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 153525.png" alt="屏幕截图 2025-04-16 153525" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 153525.png" alt="屏幕截图 2025-04-16 153525" style="zoom:67%;" />
 
 基于mq的异步通知：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 153603.png" alt="屏幕截图 2025-04-16 153603" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 153603.png" alt="屏幕截图 2025-04-16 153603" style="zoom: 50%;" />
 
 我们这里采用另一种进行举例：
 
 基于Canal的异步通知：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 153609.png" alt="屏幕截图 2025-04-16 153609" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 153609.png" alt="屏幕截图 2025-04-16 153609" style="zoom: 50%;" />
 
 
 
@@ -2944,7 +2944,7 @@ openresty的缓存时设置有效期进行更新的，我们接下来只对redis
 
 Canal基于数据库增量解析，提供增量数据订阅&消费。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 160400.png" alt="屏幕截图 2025-04-16 160400" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 160400.png" alt="屏幕截图 2025-04-16 160400" style="zoom:67%;" />
 
 Canal就是把自己伪装成MySQL的一个slave节点，从而监听master 的binary log变化。再把得到的变化信息通知给Canal的客户端，进而完成对其他地方数据的同步。
 
@@ -2962,4 +2962,4 @@ Canal就是把自己伪装成MySQL的一个slave节点，从而监听master 的b
 
 ## 多级缓存总结
 
-![屏幕截图 2025-04-16 162915](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 162915.png)
+![屏幕截图 2025-04-16 162915](../assets/屏幕截图 2025-04-16 162915.png)

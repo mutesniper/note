@@ -15,17 +15,17 @@ Redis的key虽然可以自定义，但最好遵循下面几个最佳实践约定
 
 **BigKey的定义（不绝对）**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 174432.png" alt="屏幕截图 2025-04-16 174432" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 174432.png" alt="屏幕截图 2025-04-16 174432" style="zoom: 50%;" />
 
 
 
 **BigKey的危害：**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 174737.png" alt="屏幕截图 2025-04-16 174737" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-16 174737.png" alt="屏幕截图 2025-04-16 174737" style="zoom:50%;" />
 
 **发现BigKey：**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 180746.png" alt="屏幕截图 2025-04-16 180746" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-16 180746.png" alt="屏幕截图 2025-04-16 180746" style="zoom:50%;" />
 
 **删除bigkey:**
 
@@ -79,19 +79,19 @@ Redis的key虽然可以自定义，但最好遵循下面几个最佳实践约定
 
 ### 选择恰当数据类型
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 180935.png" alt="屏幕截图 2025-04-16 180935" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-16 180935.png" alt="屏幕截图 2025-04-16 180935" style="zoom:50%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 180950.png" alt="屏幕截图 2025-04-16 180950" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-16 180950.png" alt="屏幕截图 2025-04-16 180950" style="zoom:50%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 181032.png" alt="屏幕截图 2025-04-16 181032" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-16 181032.png" alt="屏幕截图 2025-04-16 181032" style="zoom:50%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 181057.png" alt="屏幕截图 2025-04-16 181057" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-16 181057.png" alt="屏幕截图 2025-04-16 181057" style="zoom:50%;" />
 
 
 
@@ -103,13 +103,13 @@ Redis的key虽然可以自定义，但最好遵循下面几个最佳实践约定
 
 ### 单机批处理（管道）
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 183308.png" alt="屏幕截图 2025-04-16 183308" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 183308.png" alt="屏幕截图 2025-04-16 183308" style="zoom: 50%;" />
 
 而redis执行命令的耗时是远小于网络传输耗时的，所以我们自然而然的想到将大量数据进行批量发送并处理。
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 183509.png" alt="屏幕截图 2025-04-16 183509" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 183509.png" alt="屏幕截图 2025-04-16 183509" style="zoom: 67%;" />
 
 **不能一次传输太多命令，可能会将带宽占满，导致网络阻塞，时间会更长**
 
@@ -117,7 +117,7 @@ Redis的key虽然可以自定义，但最好遵循下面几个最佳实践约定
 
 mset/hmset虽然可以批处理，但是却只能操作部分数据类型，因此如果有对复杂数据类型的批处理需要，建议使用Pipeline功能：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 183853.png" alt="屏幕截图 2025-04-16 183853" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-16 183853.png" alt="屏幕截图 2025-04-16 183853" style="zoom:50%;" />
 
 
 
@@ -162,7 +162,7 @@ stringredistemplate也有pipeline，叫做executePipeline，这里不做演示�
 集群下的批处理执行的命令操作的key必须落在同一个插槽中，否则会执行失败。
 
 解决方案：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 184711.png" alt="屏幕截图 2025-04-16 184711" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 184711.png" alt="屏幕截图 2025-04-16 184711" style="zoom: 50%;" />
 
 推荐使用并行slot
 
@@ -187,27 +187,27 @@ redis执行时耗时超过某个阈值的命令，成为慢查询
 
 相关配置:
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 190832.png" alt="屏幕截图 2025-04-16 190832" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 190832.png" alt="屏幕截图 2025-04-16 190832" style="zoom: 50%;" />
 
 慢查询日志操作：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 191040.png" alt="屏幕截图 2025-04-16 191040" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 191040.png" alt="屏幕截图 2025-04-16 191040" style="zoom: 67%;" />
 
 
 
 ### 命令及安全配置
 
-![屏幕截图 2025-04-16 201124](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 201124.png)
+![屏幕截图 2025-04-16 201124](../assets/屏幕截图 2025-04-16 201124.png)
 
 
 
-![屏幕截图 2025-04-16 201130](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 201130.png)
+![屏幕截图 2025-04-16 201130](../assets/屏幕截图 2025-04-16 201130.png)
 
 
 
 ### 内存配置
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 201937.png" alt="屏幕截图 2025-04-16 201937" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 201937.png" alt="屏幕截图 2025-04-16 201937" style="zoom: 67%;" />
 
 
 
@@ -219,7 +219,7 @@ redis执行时耗时超过某个阈值的命令，成为慢查询
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 205149.png" alt="屏幕截图 2025-04-16 205149" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 205149.png" alt="屏幕截图 2025-04-16 205149" style="zoom: 67%;" />
 
 可以用`client list`查看输入缓冲区、输出缓冲区的占用情况。
 
@@ -237,7 +237,7 @@ redis执行时耗时超过某个阈值的命令，成为慢查询
 
 ### 集群带宽问题
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 210242.png" alt="屏幕截图 2025-04-16 210242" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 210242.png" alt="屏幕截图 2025-04-16 210242" style="zoom: 67%;" />
 
 
 
@@ -247,17 +247,17 @@ redis执行时耗时超过某个阈值的命令，成为慢查询
 
 ### 动态字符串SDS
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 221121.png" alt="屏幕截图 2025-04-16 221121" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 221121.png" alt="屏幕截图 2025-04-16 221121" style="zoom: 67%;" />
 
 -------------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 221218.png" alt="屏幕截图 2025-04-16 221218" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 221218.png" alt="屏幕截图 2025-04-16 221218" style="zoom: 67%;" />
 
 其中uint8代表无符号整数，最大长度为8个bit位(255)，不包括\0
 
 -----------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 221525.png" alt="屏幕截图 2025-04-16 221525" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 221525.png" alt="屏幕截图 2025-04-16 221525" style="zoom:67%;" />
 
 
 
@@ -269,21 +269,21 @@ redis执行时耗时超过某个阈值的命令，成为慢查询
 
 **元素不重复**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 222428.png" alt="屏幕截图 2025-04-16 222428" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 222428.png" alt="屏幕截图 2025-04-16 222428" style="zoom: 67%;" />
 
 --------------------
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 223258.png" alt="屏幕截图 2025-04-16 223258" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 223258.png" alt="屏幕截图 2025-04-16 223258" style="zoom: 50%;" />
 
 ----------------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 223310.png" alt="屏幕截图 2025-04-16 223310" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 223310.png" alt="屏幕截图 2025-04-16 223310" style="zoom: 50%;" />
 
 -------------------------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 224046.png" alt="屏幕截图 2025-04-16 224046" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 224046.png" alt="屏幕截图 2025-04-16 224046" style="zoom:67%;" />
 
 **IntSet在数据量不多的情况下使用**
 
@@ -293,13 +293,13 @@ redis执行时耗时超过某个阈值的命令，成为慢查询
 
 #### DictHashTable和DictEntry
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 232555.png" alt="屏幕截图 2025-04-16 232555" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-16 232555.png" alt="屏幕截图 2025-04-16 232555" style="zoom: 50%;" />
 
 哈希表的size总等于2^n，跟哈希运算有关。
 
 used可能大于size
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 233301.png" alt="屏幕截图 2025-04-16 233301" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 233301.png" alt="屏幕截图 2025-04-16 233301" style="zoom:67%;" />
 
 h&sizemark其实就是h对size求余（因为sizemark低位全是1，进行与操作就能得到h的低位，这个低位就是模size的余数）
 
@@ -307,7 +307,7 @@ h&sizemark其实就是h对size求余（因为sizemark低位全是1，进行与�
 
 #### **Dict**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 233650.png" alt="屏幕截图 2025-04-16 233650" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-16 233650.png" alt="屏幕截图 2025-04-16 233650" style="zoom:67%;" />
 
 
 
@@ -315,7 +315,7 @@ h&sizemark其实就是h对size求余（因为sizemark低位全是1，进行与�
 
 ##### **Dict扩容**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-16 234731.png" alt="屏幕截图 2025-04-16 234731" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-16 234731.png" alt="屏幕截图 2025-04-16 234731" style="zoom: 67%;" />
 
 （由于bgsave  、bgrewriteaof占用资源大，所以在进行它们时不会扩容，除非大于5。）
 
@@ -323,7 +323,7 @@ h&sizemark其实就是h对size求余（因为sizemark低位全是1，进行与�
 
 ##### **Dict收缩**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 075338.png" alt="屏幕截图 2025-04-17 075338" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 075338.png" alt="屏幕截图 2025-04-17 075338" style="zoom: 67%;" />
 
 
 
@@ -346,13 +346,13 @@ Rehash 是指将现有的哈希表中的所有键值对重新映射到一个新�
 
 如果一次性进行rehash，主线程是阻塞的，Redis 使用 **渐进式 rehash** 来避免一次性 rehash 带来的性能问题。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 082201.png" alt="屏幕截图 2025-04-17 082201" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 082201.png" alt="屏幕截图 2025-04-17 082201" style="zoom:67%;" />
 
 
 
 #### 总结
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 082511.png" alt="屏幕截图 2025-04-17 082511" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 082511.png" alt="屏幕截图 2025-04-17 082511" style="zoom:67%;" />
 
 
 
@@ -366,9 +366,9 @@ Dict的内存分配是不连续的，需要通过指针进行指向，指针本�
 
 ZipList可以看成一种特殊的双向链表（实际不是），有一系列特殊编码的连续内存块组成。可以在任意一端进行压入/弹出操作，并且该操作的时间复杂度位O(1)。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 090247.png" alt="屏幕截图 2025-04-17 090247" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 090247.png" alt="屏幕截图 2025-04-17 090247" style="zoom: 67%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 090437.png" alt="屏幕截图 2025-04-17 090437" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 090437.png" alt="屏幕截图 2025-04-17 090437" style="zoom:67%;" />
 
 既然每个entry占用的内存大小是不固定的，那么是如何进行遍历的呢？
 
@@ -376,7 +376,7 @@ ZipList可以看成一种特殊的双向链表（实际不是），有一系列�
 
 ZipList中的entry不像链表那样记录前后节点的指针，因为两个指针占用16个字节，浪费内存。而是采用了下面的结构：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 090904.png" alt="屏幕截图 2025-04-17 090904" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 090904.png" alt="屏幕截图 2025-04-17 090904" style="zoom: 67%;" />
 
 - previous_entry_length：前一个节点的长度，占1或5个字节。
   - 如果前一个字节的长度小于254字节，1个字节来保存长度
@@ -392,15 +392,15 @@ ZipList中所有存储长度的数值均采用小端字节序，即低位字节�
 
 **字符串编码：**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 093500.png" alt="屏幕截图 2025-04-17 093500" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 093500.png" alt="屏幕截图 2025-04-17 093500" style="zoom: 67%;" />
 
 **整数编码**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 094311.png" alt="屏幕截图 2025-04-17 094311" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 094311.png" alt="屏幕截图 2025-04-17 094311" style="zoom:67%;" />
 
 其中，最后一种能表示0-12，也省略了content：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 094346.png" alt="屏幕截图 2025-04-17 094346" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 094346.png" alt="屏幕截图 2025-04-17 094346" style="zoom:67%;" />
 
 
 
@@ -424,7 +424,7 @@ ZipList这种特殊情况下产生连续多次空间扩展操作称为**连锁�
 
 #### 总结
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 101303.png" alt="屏幕截图 2025-04-17 101303" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 101303.png" alt="屏幕截图 2025-04-17 101303" style="zoom:67%;" />
 
 ### ListPack
 
@@ -461,16 +461,16 @@ entry结构：
 
   - 整数编码：
 
-    <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-18 182401.png" alt="屏幕截图 2025-04-18 182401" style="zoom: 50%;" />
+    <img src="../assets/屏幕截图 2025-04-18 182401.png" alt="屏幕截图 2025-04-18 182401" style="zoom: 50%;" />
 
   - 字符串编码:
-    <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-18 182410.png" alt="屏幕截图 2025-04-18 182410" style="zoom:50%;" />
+    <img src="../assets/屏幕截图 2025-04-18 182410.png" alt="屏幕截图 2025-04-18 182410" style="zoom:50%;" />
 
 - data:存储真正的数据。数据类型只能是整数类型或字符串类型。不同的数据占用的字节长度不同。
 
 - element-total-len：用于记录当前节点的长度（不包括本身，是encoding+data），用于实现逆序遍历。由于其特殊的记录方式，使其本身占用的字节数可能会是1、2、3、4、5字节。
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-18 182419.png" alt="屏幕截图 2025-04-18 182419" style="zoom:50%;" />
+  <img src="../assets/屏幕截图 2025-04-18 182419.png" alt="屏幕截图 2025-04-18 182419" style="zoom:50%;" />
 
 ### QuickList
 
@@ -480,18 +480,18 @@ entry结构：
 
 --引入QuickList，它是一个双端链表，只不过链表中的每一个节点都是ZipList。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 105515.png" alt="屏幕截图 2025-04-17 105515" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 105515.png" alt="屏幕截图 2025-04-17 105515" style="zoom:67%;" />
 
 
 
 --------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 105637.png" alt="屏幕截图 2025-04-17 105637" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 105637.png" alt="屏幕截图 2025-04-17 105637" style="zoom:67%;" />
 
 ------------
 
 结构源码：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 110043.png" alt="屏幕截图 2025-04-17 110043" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 110043.png" alt="屏幕截图 2025-04-17 110043" style="zoom:67%;" />
 
 ---------------------
 
@@ -499,13 +499,13 @@ entry结构：
 
 其中中间两个ZipList是被压缩之后的格式
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 110149.png" alt="屏幕截图 2025-04-17 110149" style="zoom:80%;" />
+<img src="../assets/屏幕截图 2025-04-17 110149.png" alt="屏幕截图 2025-04-17 110149" style="zoom:80%;" />
 
 
 
 **特点**
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 110315.png" alt="屏幕截图 2025-04-17 110315" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-17 110315.png" alt="屏幕截图 2025-04-17 110315" style="zoom:50%;" />
 
 
 
@@ -522,7 +522,7 @@ ZipList和QuickList都很节省内存，但是在遍历元素的时候，只能�
 - 元素按照升序排列存储
 - 节点可能包含多个指针，指针跨度（层级）不同，最多支持32级指针。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 112315.png" alt="屏幕截图 2025-04-17 112315" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-17 112315.png" alt="屏幕截图 2025-04-17 112315" style="zoom: 50%;" />
 
 每个节点有一个属性是多级索引数组，比如上图的1号节点的数组中有四个元素。每个元素有两个值：下一个节点的指针和索引跨度。
 
@@ -532,12 +532,12 @@ ZipList和QuickList都很节省内存，但是在遍历元素的时候，只能�
 
 源码：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 112736.png" alt="屏幕截图 2025-04-17 112736" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 112736.png" alt="屏幕截图 2025-04-17 112736" style="zoom: 67%;" />
 
 ---------
 
 结构演示：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 112849.png" alt="屏幕截图 2025-04-17 112849" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 112849.png" alt="屏幕截图 2025-04-17 112849" style="zoom:67%;" />
 
 **注意：虽然上图用level进行互相指，但是实际指向的是节点**
 
@@ -545,7 +545,7 @@ ZipList和QuickList都很节省内存，但是在遍历元素的时候，只能�
 
 总结：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 113143.png" alt="屏幕截图 2025-04-17 113143" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-17 113143.png" alt="屏幕截图 2025-04-17 113143" style="zoom:50%;" />
 
 
 
@@ -559,7 +559,7 @@ ZipList和QuickList都很节省内存，但是在遍历元素的时候，只能�
 
 Redis中任意数据类型的键和值都会被封装成一个RedisObject，也叫做Redis对象，源码如下：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 113718.png" alt="屏幕截图 2025-04-17 113718" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 113718.png" alt="屏幕截图 2025-04-17 113718" style="zoom:67%;" />
 
 整个对象占用16个字节。
 
@@ -569,11 +569,11 @@ Redis中任意数据类型的键和值都会被封装成一个RedisObject，也�
 
 #### Redis编码方式
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 114052.png" alt="屏幕截图 2025-04-17 114052" style="zoom:50%;" />
+<img src="../assets/屏幕截图 2025-04-17 114052.png" alt="屏幕截图 2025-04-17 114052" style="zoom:50%;" />
 
 数据类型对应的编码方式:
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 114130.png" alt="屏幕截图 2025-04-17 114130" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-17 114130.png" alt="屏幕截图 2025-04-17 114130" style="zoom: 50%;" />
 
 
 
@@ -591,18 +591,18 @@ String是redis中最常见的数据存储类型：
 
 - 其基本编码方式是raw，基于简单动态字符串（SDS）实现，存储上限为512mb
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 121210.png" alt="屏幕截图 2025-04-17 121210" style="zoom:50%;" />
+  <img src="../assets/屏幕截图 2025-04-17 121210.png" alt="屏幕截图 2025-04-17 121210" style="zoom:50%;" />
 
 - 如果存储的SDS长度小于44字节，则会采用EMBSTR编码，此时object head 与SDS是一段连续空间。申请内存时只需要调用一次内存分配函数，效率更高。
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 121216.png" alt="屏幕截图 2025-04-17 121216" style="zoom: 67%;" />
+  <img src="../assets/屏幕截图 2025-04-17 121216.png" alt="屏幕截图 2025-04-17 121216" style="zoom: 67%;" />
 
   为什么是44？
   长度44字节时，SDS的len、alloc、flags各一个字节，加上结束标识一个字节，再加上object head，一共64字节。redis在内存分配时会以2^n进行内存分配，64刚好，不会产生内存分片。
 
 - 存储的字符串是整数值，并且大小在LONG_MAX范围内（long范围内），会采用INT编码：直接将数据保存在RedisObject的ptr指针位置（刚好8字节），不再需要SDS了。
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 121839.png" alt="屏幕截图 2025-04-17 121839" style="zoom:75%;" />
+  <img src="../assets/屏幕截图 2025-04-17 121839.png" alt="屏幕截图 2025-04-17 121839" style="zoom:75%;" />
 
 
 
@@ -614,13 +614,13 @@ Redis采用QuickList来实现List。
 
 给出此函数的一个片段：
 
-![屏幕截图 2025-04-17 130357](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 130357.png)
+![屏幕截图 2025-04-17 130357](../assets/屏幕截图 2025-04-17 130357.png)
 
 
 
 list内存结构:
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 130444.png" alt="屏幕截图 2025-04-17 130444" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 130444.png" alt="屏幕截图 2025-04-17 130444" style="zoom: 67%;" />
 
 （其实就是在QuickList基础上包了一层object head）
 
@@ -644,11 +644,11 @@ Set的很多命令都需要去判断元素是否存在，那么他对查询元�
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 132414.png" alt="屏幕截图 2025-04-17 132414" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 132414.png" alt="屏幕截图 2025-04-17 132414" style="zoom: 67%;" />
 
 当采用IntSet时，每一次插入新元素都会检查符不符合要求，违背了就会转化成HT编码。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 132647.png" alt="屏幕截图 2025-04-17 132647" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 132647.png" alt="屏幕截图 2025-04-17 132647" style="zoom:67%;" />
 
 
 
@@ -671,11 +671,11 @@ ZSet也就是SortedSet，其中每一个元素都需要指定一个score和membe
 
 所以，Zset两者结合：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 134530.png" alt="屏幕截图 2025-04-17 134530" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-17 134530.png" alt="屏幕截图 2025-04-17 134530" style="zoom: 80%;" />
 
 结构图：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 134748.png" alt="屏幕截图 2025-04-17 134748" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 134748.png" alt="屏幕截图 2025-04-17 134748" style="zoom: 67%;" />
 
 
 
@@ -692,7 +692,7 @@ ZSet也就是SortedSet，其中每一个元素都需要指定一个score和membe
 - 元素数量小于zset_max_ziplist_entries，默认128。设置为0则禁用ziplist
 - 每个元素都小于zset_max_ziplist_value字节，默认64
 
-![屏幕截图 2025-04-17 140011](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 140011.png)
+![屏幕截图 2025-04-17 140011](../assets/屏幕截图 2025-04-17 140011.png)
 
 
 
@@ -705,13 +705,13 @@ ZipList本身不支持排序，需要通过编码实现：
 
 结构图：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 140835.png" alt="屏幕截图 2025-04-17 140835" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-17 140835.png" alt="屏幕截图 2025-04-17 140835" style="zoom: 50%;" />
 
 
 
 ##### 转换实现方式
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 140324.png" alt="屏幕截图 2025-04-17 140324" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-17 140324.png" alt="屏幕截图 2025-04-17 140324" style="zoom: 80%;" />
 
 redis兼顾内存和性能，数据量小时查询的性能没有太大波动，采用ziplist节省内存。数据量大了之后以空间换时间。
 
@@ -736,38 +736,38 @@ Hash结构与Redis中的Zset非常类似：
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 143527.png" alt="屏幕截图 2025-04-17 143527" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 143527.png" alt="屏幕截图 2025-04-17 143527" style="zoom:67%;" />
 
 ------------
 
 ZipList：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 143543.png" alt="屏幕截图 2025-04-17 143543" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 143543.png" alt="屏幕截图 2025-04-17 143543" style="zoom:67%;" />
 
 ---------------
 
 HT：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 143723.png" alt="屏幕截图 2025-04-17 143723" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 143723.png" alt="屏幕截图 2025-04-17 143723" style="zoom:67%;" />
 
 
 
 
 
 源码片段：
-![屏幕截图 2025-04-17 145107](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 145107.png)
+![屏幕截图 2025-04-17 145107](../assets/屏幕截图 2025-04-17 145107.png)
 
 --------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 145058.png" alt="屏幕截图 2025-04-17 145058" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-17 145058.png" alt="屏幕截图 2025-04-17 145058" style="zoom:75%;" />
 
 -------------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 144603.png" alt="屏幕截图 2025-04-17 144603" style="zoom:80%;" />
+<img src="../assets/屏幕截图 2025-04-17 144603.png" alt="屏幕截图 2025-04-17 144603" style="zoom:80%;" />
 
 -----------------
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 144821.png" alt="屏幕截图 2025-04-17 144821" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-17 144821.png" alt="屏幕截图 2025-04-17 144821" style="zoom: 80%;" />
 
 
 
@@ -829,18 +829,18 @@ HT：
 
 应用需要基于发行版去访问内核，然后基于内核操作计算机硬件。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 145905.png" alt="屏幕截图 2025-04-17 145905" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 145905.png" alt="屏幕截图 2025-04-17 145905" style="zoom: 67%;" />
 
 内核本质也是应用，运行也需要消耗硬件资源。
 
 所以要将用户应用和内核隔离开，防止用户应用与内核冲突甚至造成内核崩溃。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 150601.png" alt="屏幕截图 2025-04-17 150601" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 150601.png" alt="屏幕截图 2025-04-17 150601" style="zoom:67%;" />
 
 进程运行在用户空间称为用户态，运行在内核空间称为内核态。
 
 两个状态的切换流程举例：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 151209.png" alt="屏幕截图 2025-04-17 151209" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 151209.png" alt="屏幕截图 2025-04-17 151209" style="zoom: 67%;" />
 
 影响性能的主要点是**数据wait的过程以及buffer拷贝的过程。**
 
@@ -852,7 +852,7 @@ HT：
 
 顾名思义，阻塞IO就是两个阶段都必须阻塞等待：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 152529.png" alt="屏幕截图 2025-04-17 152529" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 152529.png" alt="屏幕截图 2025-04-17 152529" style="zoom:67%;" />
 
 由于阻塞，性能较差。
 
@@ -864,13 +864,13 @@ HT：
 
 但这个非阻塞仅仅是一阶段等待数据时不阻塞，二阶段拷贝数据时仍然是阻塞的：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 152958.png" alt="屏幕截图 2025-04-17 152958" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 152958.png" alt="屏幕截图 2025-04-17 152958" style="zoom: 67%;" />
 
 
 
 ### IO多路复用
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 153502.png" alt="屏幕截图 2025-04-17 153502" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 153502.png" alt="屏幕截图 2025-04-17 153502" style="zoom: 67%;" />
 
 提高效率的办法：
 
@@ -887,7 +887,7 @@ HT：
 
 示意图：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 154725.png" alt="屏幕截图 2025-04-17 154725" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-17 154725.png" alt="屏幕截图 2025-04-17 154725" style="zoom: 80%;" />
 
 
 
@@ -904,7 +904,7 @@ HT：
 
 ##### select
 
-![屏幕截图 2025-04-17 160605](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 160605.png)
+![屏幕截图 2025-04-17 160605](../assets/屏幕截图 2025-04-17 160605.png)
 
 将要监听的位置置为1，拷贝给内核，内核将未就绪的fd置为0，再拷贝给用户。
 
@@ -914,13 +914,13 @@ HT：
 
 ##### poll
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 163357.png" alt="屏幕截图 2025-04-17 163357" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 163357.png" alt="屏幕截图 2025-04-17 163357" style="zoom:67%;" />
 
 
 
 ##### epoll
 
- ![屏幕截图 2025-04-17 164804](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 164804.png)
+ ![屏幕截图 2025-04-17 164804](../assets/屏幕截图 2025-04-17 164804.png)
 
 
 
@@ -965,13 +965,13 @@ epoll解决问题：
 
 #### 基于epoll的服务端流程
 
-![屏幕截图 2025-04-17 174341](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 174341.png)
+![屏幕截图 2025-04-17 174341](../assets/屏幕截图 2025-04-17 174341.png)
 
 
 
 ### 信号驱动IO
 
-![屏幕截图 2025-04-17 174539](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 174539.png)
+![屏幕截图 2025-04-17 174539](../assets/屏幕截图 2025-04-17 174539.png)
 
 当有大量IO操作时，信号较多，SIGIO处理函数不能及时处理可能导致信号队列溢出
 
@@ -981,7 +981,7 @@ epoll解决问题：
 
 ### 异步IO
 
-![屏幕截图 2025-04-17 175346](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 175346.png)
+![屏幕截图 2025-04-17 175346](../assets/屏幕截图 2025-04-17 175346.png)
 
 在高并发的情况下，异步IO交给内核的任务过多，无法及时处理。
 
@@ -1002,17 +1002,17 @@ Redis到底是单线程还是多线程？
 - 如果是Redis的核心业务部分（命令处理），单线程
 - 如果整个Redis，多线程
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 175841.png" alt="屏幕截图 2025-04-17 175841" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 175841.png" alt="屏幕截图 2025-04-17 175841" style="zoom:67%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 175922.png" alt="屏幕截图 2025-04-17 175922" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 175922.png" alt="屏幕截图 2025-04-17 175922" style="zoom:67%;" />
 
 #### Redis单线程网络模型
 
 Redis通过IO多路复用来提高网络性能，并且支持各种不同的多路复用实现，并且将这些实现进行封装，提供了统一的高性能事件库API库AE：
 
-![屏幕截图 2025-04-17 184828](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 184828.png)
+![屏幕截图 2025-04-17 184828](../assets/屏幕截图 2025-04-17 184828.png)
 
 右边的图是根据当前的操作系统选择合适的库。
 
@@ -1020,11 +1020,11 @@ Redis通过IO多路复用来提高网络性能，并且支持各种不同的多�
 
 **Redis单线程网络模型的整个流程：**（事件循环）
 
-![屏幕截图 2025-04-17 174341](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 174341.png)
+![屏幕截图 2025-04-17 174341](../assets/屏幕截图 2025-04-17 174341-1745051872642.png)
 
 -----------------
 
-![屏幕截图 2025-04-17 191115](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 191115.png)
+![屏幕截图 2025-04-17 191115](../assets/屏幕截图 2025-04-17 191115.png)
 
 可以把redis看成服务端，redis启动时，
 
@@ -1032,7 +1032,7 @@ Redis通过IO多路复用来提高网络性能，并且支持各种不同的多�
 
 redis在内核中创建一个epoll实例，使用epoll_ctl()将套接字添加进epoll，并指定感兴趣的事件类型。对于服务器套接字，感兴趣的是可读事件（EPOOLLIN），这意味着有新的客户端尝试建立连接。同时指定一个处理器，定义了收到连接请求后该怎么做。
 
-在将服务端套接字注册进epoll的同时，增加一个处理器（监听可读事件，也就是客户端发来连接请求），在收到客户端连接请求时调用，如下：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 200753.png" alt="屏幕截图 2025-04-17 200753" style="zoom:75%;" />
+在将服务端套接字注册进epoll的同时，增加一个处理器（监听可读事件，也就是客户端发来连接请求），在收到客户端连接请求时调用，如下：<img src="../assets/屏幕截图 2025-04-17 200753.png" alt="屏幕截图 2025-04-17 200753" style="zoom:75%;" />
 
 （下面那张图调用的这张图）
 
@@ -1043,7 +1043,7 @@ redis在内核中创建一个epoll实例，使用epoll_ctl()将套接字添加�
 - **处理新连接**：如果服务器套接字变得可读，说明有一个或多个新的客户端连接请求到达。此时，Redis 会调用 `accept()` 接受这些连接，并为每个新连接创建一个新的客户端套接字。
 - **为新连接注册事件**：随后，Redis 会将这些新的客户端套接字(client socket)也添加到 `epoll` 实例中，以便监听来自客户端的数据读取或其他事件。并添加处理器（监听读事件），在收到请求时进行回调。(参考上图)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 200831.png" alt="屏幕截图 2025-04-17 200831" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 200831.png" alt="屏幕截图 2025-04-17 200831" style="zoom: 67%;" />
 
 
 
@@ -1051,13 +1051,13 @@ redis在内核中创建一个epoll实例，使用epoll_ctl()将套接字添加�
 
 在源码中可以看到，每个客户端socket只要跟服务端连接，redis就会把它封装成一个client实例，这个实例包括客户端的所有信息甚至请求信息，这也是我们之前的源码中能使用client对象来获取命令的原因。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 193935.png" alt="屏幕截图 2025-04-17 193935" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-17 193935.png" alt="屏幕截图 2025-04-17 193935" style="zoom:75%;" />
 
 这时还没有将返回的结果写出，只是添加到队列中等待写出。
 
 在什么时候写出？---beforeSleep
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 194802.png" alt="屏幕截图 2025-04-17 194802" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-17 194802.png" alt="屏幕截图 2025-04-17 194802" style="zoom:75%;" />
 
 可以看到，这里又给客户端套接字定义了一个处理器，上面已经给他定义了读事件的处理器，而这里是写事件的处理器。处理器会将队列中的客户端的缓冲区中的数据取出来，写道客户端socket中，客户端就拿到结果了。
 
@@ -1075,7 +1075,7 @@ Redis6.0模块中引入了多线程，目的是提高IO读写效率。因此在�
 
 总结：
 
-![屏幕截图 2025-04-17 200323](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 200323.png)
+![屏幕截图 2025-04-17 200323](../assets/屏幕截图 2025-04-17 200323.png)
 
 
 
@@ -1083,10 +1083,10 @@ Redis6.0模块中引入了多线程，目的是提高IO读写效率。因此在�
 
 ### RESP协议
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 204800.png" alt="屏幕截图 2025-04-17 204800" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-17 204800.png" alt="屏幕截图 2025-04-17 204800" style="zoom: 50%;" />
 
 RESP数据类型：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 205604.png" alt="屏幕截图 2025-04-17 205604" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-17 205604.png" alt="屏幕截图 2025-04-17 205604" style="zoom: 50%;" />
 
 未来在客户端向服务端发送命令时，命令就是用数组进行发送的，数组中都是字符串形式的命令片段（如上图左下角）
 
@@ -1224,7 +1224,7 @@ Redis是如何知道一个key是否过期呢？
 
 #### DB结构
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 215344.png" alt="屏幕截图 2025-04-17 215344" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 215344.png" alt="屏幕截图 2025-04-17 215344" style="zoom:67%;" />
 
 其中expires中存放了所有存在expire的key及其TTL，key存储的就是key，val存储的是TTL。
 
@@ -1232,7 +1232,7 @@ Redis是如何知道一个key是否过期呢？
 
 结构：
 
-![屏幕截图 2025-04-17 215817](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 215817.png)
+![屏幕截图 2025-04-17 215817](../assets/屏幕截图 2025-04-17 215817.png)
 
 其中上面的dictEntry中的val其实是指向各种数据类型的value的指针，这里做了简化。
 
@@ -1242,7 +1242,7 @@ Redis是如何知道一个key是否过期呢？
 
 不是在TTL到期后就立即删除，而是在访问一个key的时候，检查该key的存活时间，如果已经过期才删除。
 
-![屏幕截图 2025-04-17 220423](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 220423.png)
+![屏幕截图 2025-04-17 220423](../assets/屏幕截图 2025-04-17 220423.png)
 
 但是如果只有惰性删除，在某个key长时间没有被访问时，就不会删除
 
@@ -1257,11 +1257,11 @@ Redis是如何知道一个key是否过期呢？
 
 
 
-![屏幕截图 2025-04-17 222720](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 222720.png)
+![屏幕截图 2025-04-17 222720](../assets/屏幕截图 2025-04-17 222720.png)
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 223402.png" alt="屏幕截图 2025-04-17 223402" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-17 223402.png" alt="屏幕截图 2025-04-17 223402" style="zoom: 67%;" />
 
 
 
@@ -1275,7 +1275,7 @@ Redis是如何知道一个key是否过期呢？
 
 
 
-Redis在任何命令执行前作内存检查：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 224531.png" alt="屏幕截图 2025-04-17 224531" style="zoom: 67%;" />
+Redis在任何命令执行前作内存检查：<img src="../assets/屏幕截图 2025-04-17 224531.png" alt="屏幕截图 2025-04-17 224531" style="zoom: 67%;" />
 
 
 
@@ -1283,11 +1283,11 @@ Redis在任何命令执行前作内存检查：<img src="C:\Users\14693\Desktop\
 
 八种策略：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 225042.png" alt="屏幕截图 2025-04-17 225042" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-17 225042.png" alt="屏幕截图 2025-04-17 225042" style="zoom:67%;" />
 
 如何统计最近使用时间和使用频率？
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 225720.png" alt="屏幕截图 2025-04-17 225720" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-17 225720.png" alt="屏幕截图 2025-04-17 225720" style="zoom:75%;" />
 
 其中lru属性根据淘汰策略的不同配置会存储不同信息（lru或lfu）
 
@@ -1295,7 +1295,7 @@ Redis在任何命令执行前作内存检查：<img src="C:\Users\14693\Desktop\
 
 performEvictions方法源码的简单示意图：
 
-![屏幕截图 2025-04-17 230757](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-17 230757.png)
+![屏幕截图 2025-04-17 230757](../assets/屏幕截图 2025-04-17 230757.png)
 
 其中应该是db->expires不是db->entries。
 

@@ -816,7 +816,7 @@ PageInfo<Emp> info=new PageInfo<>(list);
 
 - 在右侧栏中选择数据库，使用MyBatisX-Generator
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-12 111231.png" alt="屏幕截图 2025-03-12 111231" style="zoom:75%;" />
+  <img src="../assets/屏幕截图 2025-03-12 111231.png" alt="屏幕截图 2025-03-12 111231" style="zoom:75%;" />
 
 - 使用@MapperScan(mapper的包名)给所有mapper类添加@mapper注解
 

@@ -1,4 +1,4 @@
- <img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 124554.png" alt="屏幕截图 2025-04-04 124554" style="zoom: 50%;" />
+ <img src="../assets/屏幕截图 2025-04-04 124554.png" alt="屏幕截图 2025-04-04 124554" style="zoom: 50%;" />
 
 在操作系统上安装容器运行时环境，利用容器的技术启动英应用，每个应用运行在自己的容器内部，每个容器包含了本应用运行的完整环境。
 
@@ -18,7 +18,7 @@
 
 镜像仓库：存储和管理镜像的平台，Docker官方维护了一个公共仓库：Docker Hub
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 150055.png" alt="屏幕截图 2025-04-04 150055" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-04 150055.png" alt="屏幕截图 2025-04-04 150055" style="zoom: 67%;" />
 
 
 
@@ -134,7 +134,7 @@ source  ~/.bashrc
 
 比如我们创建一个html数据卷，那么就会自动在宿主机上创建一个对应的目录:`/var/lib/docker`下的`html/_data`目录。而容器的目录和数据卷又做了挂载，所以能实现宿主机目录与容器目录间的双向映射。
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 162523.png" alt="屏幕截图 2025-04-04 162523" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-04 162523.png" alt="屏幕截图 2025-04-04 162523" style="zoom: 50%;" />
 
 
 
@@ -153,7 +153,7 @@ source  ~/.bashrc
 
 举例：
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 174839.png" alt="屏幕截图 2025-04-04 174839" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-04 174839.png" alt="屏幕截图 2025-04-04 174839" style="zoom:75%;" />
 
 
 
@@ -214,18 +214,17 @@ mysql在运行过程中会不断产生数据，如果不挂载，这些数据都
 
 构建java镜像的步骤：
 
-
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 200348.png" alt="屏幕截图 2025-04-04 200348" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-04 200348.png" alt="屏幕截图 2025-04-04 200348" style="zoom:75%;" />
 
 镜像结构：
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 200424.png" alt="屏幕截图 2025-04-04 200424" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-04 200424.png" alt="屏幕截图 2025-04-04 200424" style="zoom: 50%;" />
 
 
 
 Dockerfile就是一个文本文件，其中包含一个个指令（instruction），用指令来说明执行什么操作来构建镜像。将来docker就可以根据Dockerfile帮我们构建镜像。常见指令：
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 200701.png" alt="屏幕截图 2025-04-04 200701" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-04 200701.png" alt="屏幕截图 2025-04-04 200701" style="zoom: 67%;" />
 
 
 
@@ -233,13 +232,13 @@ Dockerfile就是一个文本文件，其中包含一个个指令（instruction�
 
 - 首先，我们可以基于Ubuntu基础镜像，利用Dockerfile描述镜像结构：
 
-  <img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 201102.png" alt="屏幕截图 2025-04-04 201102" style="zoom:75%;" />
+  <img src="../assets/屏幕截图 2025-04-04 201102.png" alt="屏幕截图 2025-04-04 201102" style="zoom:75%;" />
 
 
 
 - 可以看到，目前的步骤还是比较繁琐。于是我们来思考：不同的java应用都要用到JDK，变化的仅仅是jar包名不同，所以，把上图不变的比如JDK的配置也抽取出来，制作成一个基础镜像，就可以简化成如下的步骤：
 
-  ![屏幕截图 2025-04-04 201355](C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 201355.png)
+  ![屏幕截图 2025-04-04 201355](../assets/屏幕截图 2025-04-04 201355.png)
 
 
 
@@ -272,7 +271,7 @@ Dockerfile写完后，要怎么让docker帮我们去构建呢？这肯定需要�
 
 加入自定义网络的容器相互之间可以联通，并且可以通过容器名互相访问(这就解决了IP地址变化的问题)，Docker网络操作命令如下：
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 204024.png" alt="屏幕截图 2025-04-04 204024" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-04 204024.png" alt="屏幕截图 2025-04-04 204024" style="zoom:75%;" />
 
 
 
@@ -290,15 +289,15 @@ DockerCompose通过一个单独的docker-compose.yml模板文件（YAML格式）
 
 常用语法：（基本与docker run时的参数对应）
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-04 211310.png" alt="屏幕截图 2025-04-04 211310" style="zoom:80%;" />
+<img src="../assets/屏幕截图 2025-04-04 211310.png" alt="屏幕截图 2025-04-04 211310" style="zoom:80%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-04 211351.png" alt="屏幕截图 2025-04-04 211351" style="zoom:80%;" />
+<img src="../assets/屏幕截图 2025-04-04 211351.png" alt="屏幕截图 2025-04-04 211351" style="zoom:80%;" />
 
 
 
 docker compose命令格式如下：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-04 211415.png" alt="屏幕截图 2025-04-04 211415" style="zoom: 80%;" />
+<img src="../assets/屏幕截图 2025-04-04 211415.png" alt="屏幕截图 2025-04-04 211415" style="zoom: 80%;" />
 
 
 

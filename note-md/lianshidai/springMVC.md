@@ -141,7 +141,7 @@ public class RequestMappingLimit {
 
 url格式：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-08 115213.png" alt="屏幕截图 2025-03-08 115213" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-03-08 115213.png" alt="屏幕截图 2025-03-08 115213" style="zoom: 50%;" />
 
 
 
@@ -603,7 +603,7 @@ Resource Representational State Transfer
 
 ### 举例
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-09 104700.png" alt="屏幕截图 2025-03-09 104700" style="zoom: 33%;" />
+<img src="../assets/屏幕截图 2025-03-09 104700.png" alt="屏幕截图 2025-03-09 104700" style="zoom: 33%;" />
 
 比如GET/user/1/order/7/produce/3 。表示获取1号用户的7号订单的3号产品信息
 
@@ -1136,7 +1136,7 @@ MyHandlerInterceptor0 afterCompletion
 
 ## 拦截器和过滤器的区别
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-10 093603.png" alt="屏幕截图 2025-03-10 093603" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-03-10 093603.png" alt="屏幕截图 2025-03-10 093603" style="zoom: 50%;" />
 
 
 
@@ -1640,10 +1640,10 @@ public R get(@PathVariable("id") Long id){
 
 简要版：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-10 222911.png" alt="屏幕截图 2025-03-10 222911"  />
+<img src="../assets/屏幕截图 2025-03-10 222911.png" alt="屏幕截图 2025-03-10 222911"  />
 
 
 
 详细版：
 
-<img src="C:\Users\14693\Desktop\mvc.svg" alt="mvc" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-19 170236.png" alt="屏幕截图 2025-04-19 170236" style="zoom:150%;" />

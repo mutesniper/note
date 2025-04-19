@@ -14,13 +14,13 @@ linux系统的组成如下：
 - 内核提供系统最核心的功能，如：调度CPU、调度内存、调度文件系统、调度网络通讯、调度IO等。
 - 系统级应用程序，可以理解为出厂自带程序，可供用户快速上手操作系统，如：文件管理器、任务管理器、图片查看、音乐播放
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 134435.png" alt="屏幕截图 2025-03-15 134435" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-15 134435.png" alt="屏幕截图 2025-03-15 134435" style="zoom:75%;" />
 
 
 
 # 虚拟机
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 135244.png" alt="屏幕截图 2025-03-15 135244" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-15 135244.png" alt="屏幕截图 2025-03-15 135244" style="zoom: 67%;" />
 
 ## 虚拟机快照
 
@@ -58,7 +58,7 @@ linux下一切皆为文件，就算是硬件（如cpu）也被当作文件进行
 
 ### Linux命令基础
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 163307.png" alt="屏幕截图 2025-03-15 163307" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-03-15 163307.png" alt="屏幕截图 2025-03-15 163307" style="zoom: 50%;" />
 
 
 
@@ -139,7 +139,7 @@ mkdir :  make directory
 
 less:
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-01 211938.png" alt="屏幕截图 2025-04-01 211938" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-01 211938.png" alt="屏幕截图 2025-04-01 211938" style="zoom: 67%;" />
 
 
 
@@ -255,7 +255,7 @@ vim是vi的加强版本，不仅能编辑文本，还能编辑shell程序、以�
 - 输入模式：就是编辑模式、插入模式。此模式下可以对文件内容进行自由编辑
 - 底线命令模式：以`:`开头，通常用于文件的保存、退出
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 185118.png" alt="屏幕截图 2025-03-15 185118" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-15 185118.png" alt="屏幕截图 2025-03-15 185118" style="zoom: 67%;" />
 
 指正：上图的iao为i或a或o。并且用:wq保存退出。:w只保存不退出,  :q只退出
 
@@ -277,11 +277,11 @@ vim是vi的加强版本，不仅能编辑文本，还能编辑shell程序、以�
 
 ### 命令模式快捷键
 
-### <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 190307.png" alt="屏幕截图 2025-03-15 190307" style="zoom:75%;" />
+### <img src="../assets/屏幕截图 2025-03-15 190307.png" alt="屏幕截图 2025-03-15 190307" style="zoom:75%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 190424.png" alt="屏幕截图 2025-03-15 190424" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-15 190424.png" alt="屏幕截图 2025-03-15 190424" style="zoom:75%;" />
 
 注：G是跳到最后一行行首
 
@@ -323,7 +323,7 @@ logout：注销用户；这个命令在图形运行级别无效，在运行级�
 
 # 运行级别
 
-![屏幕截图 2025-04-01 203907](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-01 203907.png)
+![屏幕截图 2025-04-01 203907](../assets/屏幕截图 2025-04-01 203907.png)
 
 
 
@@ -434,7 +434,7 @@ Linux中关于权限的管控级别有两个，分别是：
 
 ## 查看权限控制信息
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 200215.png" alt="屏幕截图 2025-03-15 200215" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-03-15 200215.png" alt="屏幕截图 2025-03-15 200215" style="zoom:67%;" />
 
 序号一的具体含义：
 
@@ -443,7 +443,7 @@ Linux中关于权限的管控级别有两个，分别是：
 - 5-7位：表示本用户组其他用户对本文件的权限
 - 8-10位：表示其他用户的权限
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-01 230333.png" alt="屏幕截图 2025-04-01 230333" style="zoom: 50%;" />
+  <img src="../assets/屏幕截图 2025-04-01 230333.png" alt="屏幕截图 2025-04-01 230333" style="zoom: 50%;" />
 
 所以，如果要对目录内的文件进行操作，必须要对该目录有一定的权限
 
@@ -477,7 +477,7 @@ chmod命令修改文件、文件夹的权限信息
 
 - -R：同chmod规则
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 202326.png" alt="屏幕截图 2025-03-15 202326" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-15 202326.png" alt="屏幕截图 2025-03-15 202326" style="zoom:75%;" />
 
 
 
@@ -538,7 +538,7 @@ yum命令需要联网、root权限
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-15 205849.png" alt="屏幕截图 2025-03-15 205849" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-15 205849.png" alt="屏幕截图 2025-03-15 205849" style="zoom: 67%;" />
 
  `date "+%Y-%m-%d %H:%M:%S"` 
 
@@ -578,7 +578,7 @@ echo $PATH  :输出
 
 
 
-![屏幕截图 2025-04-01 220437](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-01 220437.png)
+![屏幕截图 2025-04-01 220437](../assets/屏幕截图 2025-04-01 220437.png)
 
 
 
@@ -627,11 +627,11 @@ echo $PATH  :输出
 
 `*/1****ls -l /etc/ > /tmp/to.txt`
 
-![屏幕截图 2025-04-02 000935](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 000935.png)
+![屏幕截图 2025-04-02 000935](../assets/屏幕截图 2025-04-02 000935.png)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 001058.png" alt="屏幕截图 2025-04-02 001058" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 001058.png" alt="屏幕截图 2025-04-02 001058" style="zoom:75%;" />
 
-![屏幕截图 2025-04-02 001655](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 001655.png)
+![屏幕截图 2025-04-02 001655](../assets/屏幕截图 2025-04-02 001655.png)
 
 
 
@@ -645,15 +645,15 @@ atq查看有没有未执行任务
 
 atrm+编号：删除已经设置的任务
 
-![屏幕截图 2025-04-02 002350](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 002350.png)
+![屏幕截图 2025-04-02 002350](../assets/屏幕截图 2025-04-02 002350.png)
 
 
 
-![屏幕截图 2025-04-02 002507](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 002507.png)
+![屏幕截图 2025-04-02 002507](../assets/屏幕截图 2025-04-02 002507.png)
 
 
 
-![屏幕截图 2025-04-02 002707](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 002707.png)
+![屏幕截图 2025-04-02 002707](../assets/屏幕截图 2025-04-02 002707.png)
 
 
 
@@ -663,7 +663,7 @@ atrm+编号：删除已经设置的任务
 
 ## 磁盘分区机制
 
-![屏幕截图 2025-04-02 003746](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 003746.png)
+![屏幕截图 2025-04-02 003746](../assets/屏幕截图 2025-04-02 003746.png)
 
 
 
@@ -673,19 +673,19 @@ atrm+编号：删除已经设置的任务
 
 ## 增加磁盘应用示例
 
-![屏幕截图 2025-04-02 004405](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 004405.png)
+![屏幕截图 2025-04-02 004405](../assets/屏幕截图 2025-04-02 004405.png)
 
 
 
-![屏幕截图 2025-04-02 004625](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 004625.png)
+![屏幕截图 2025-04-02 004625](../assets/屏幕截图 2025-04-02 004625.png)
 
 
 
-![屏幕截图 2025-04-02 004843](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 004843.png)
+![屏幕截图 2025-04-02 004843](../assets/屏幕截图 2025-04-02 004843.png)
 
 
 
-![屏幕截图 2025-04-02 005235](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 005235.png)
+![屏幕截图 2025-04-02 005235](../assets/屏幕截图 2025-04-02 005235.png)
 
 
 
@@ -725,7 +725,7 @@ atrm+编号：删除已经设置的任务
 
 linux能访问百度的原理图：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 093100.png" alt="屏幕截图 2025-04-02 093100" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-02 093100.png" alt="屏幕截图 2025-04-02 093100" style="zoom:67%;" />
 
 
 
@@ -789,7 +789,7 @@ DNS：域名系统，是互联网上作为域名和IP地址互相映射的一个
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 122102.png" alt="屏幕截图 2025-04-02 122102" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 122102.png" alt="屏幕截图 2025-04-02 122102" style="zoom:75%;" />
 
 即 浏览器缓存-->本地DNS缓存-->hosts文件-->域名服务DNS
 
@@ -803,7 +803,7 @@ hosts：一个文本文件，用来记录IP和主机名（hostname）的映射�
 
 通过主机名找到某个linux系统
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 121037.png" alt="屏幕截图 2025-04-02 121037" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-02 121037.png" alt="屏幕截图 2025-04-02 121037" style="zoom:67%;" />
 
 
 
@@ -830,9 +830,9 @@ hosts：一个文本文件，用来记录IP和主机名（hostname）的映射�
 
 一般结合|、more和grep使用
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 130813.png" alt="屏幕截图 2025-04-02 130813" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-02 130813.png" alt="屏幕截图 2025-04-02 130813" style="zoom: 67%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 131648.png" alt="屏幕截图 2025-04-02 131648" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-02 131648.png" alt="屏幕截图 2025-04-02 131648" style="zoom:67%;" />
 
 
 
@@ -847,7 +847,7 @@ hosts：一个文本文件，用来记录IP和主机名（hostname）的映射�
 - 支持通配符 
 - 在系统因负载过大而变得很慢时很有用
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 132952.png" alt="屏幕截图 2025-04-02 132952" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 132952.png" alt="屏幕截图 2025-04-02 132952" style="zoom:75%;" />
 
 
 
@@ -862,7 +862,7 @@ hosts：一个文本文件，用来记录IP和主机名（hostname）的映射�
 
 服务（service）本质就是进程，但是是运行在后台的，通常都会监听某个端口，等待其他程序的请求。比如(mysqld，sshd，防火墙等)。  因此我们又称之为守护进程。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 133800.png" alt="屏幕截图 2025-04-02 133800" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 133800.png" alt="屏幕截图 2025-04-02 133800" style="zoom:75%;" />
 
 
 
@@ -888,13 +888,13 @@ systemctl管理的服务在/usr/lib/systemd/system中查看
 
 ### 服务运行级别
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 134951.png" alt="屏幕截图 2025-04-02 134951" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 134951.png" alt="屏幕截图 2025-04-02 134951" style="zoom:75%;" />
 
 
 
 linux开机流程：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 135113.png" alt="屏幕截图 2025-04-02 135113" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 135113.png" alt="屏幕截图 2025-04-02 135113" style="zoom:75%;" />
 
 
 
@@ -942,7 +942,7 @@ linux开机流程：
 
 `firewall-cmd --query-port=端口号/协议`：查询端口是否开放
 
-![屏幕截图 2025-04-02 144640](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 144640.png)
+![屏幕截图 2025-04-02 144640](../assets/屏幕截图 2025-04-02 144640.png)
 
 
 
@@ -990,7 +990,7 @@ top与ps命令很相似，都用来显示正在执行的进程。top与ps最大�
 - -an：按照一定的顺序输出
 - -p：显示哪个进程在调用
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 160848.png" alt="屏幕截图 2025-04-02 160848" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 160848.png" alt="屏幕截图 2025-04-02 160848" style="zoom:75%;" />
 
 proto表示网络协议
 
@@ -1006,7 +1006,7 @@ state代表状态，LISTEN代表监听，ESTABLISHED表示已建立连接
 
 Shell 是一个命令行解释器，它为用户提供了一个向Linux内核发送请求以便运行程序的界面系统级程序；用户可以用shell来启动、挂起、停止或编写一些程序。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 222847.png" alt="屏幕截图 2025-04-02 222847" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-02 222847.png" alt="屏幕截图 2025-04-02 222847" style="zoom: 67%;" />
 
 ```sh
 #!/bin/bash
@@ -1071,7 +1071,7 @@ B=100
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 225435.png" alt="屏幕截图 2025-04-02 225435" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 225435.png" alt="屏幕截图 2025-04-02 225435" style="zoom:75%;" />
 
 
 
@@ -1097,7 +1097,7 @@ B=100
 
 ## 位置参数变量
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 230543.png" alt="屏幕截图 2025-04-02 230543" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-02 230543.png" alt="屏幕截图 2025-04-02 230543" style="zoom: 67%;" />
 
 其实就是传参
 
@@ -1117,7 +1117,7 @@ B=100
 
 ## 运算符
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 231423.png" alt="屏幕截图 2025-04-02 231423" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 231423.png" alt="屏幕截图 2025-04-02 231423" style="zoom:75%;" />
 
 
 
@@ -1129,12 +1129,12 @@ B=100
 
 ## 定时备份数据库
 
-![屏幕截图 2025-04-02 232013](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 232013.png)
+![屏幕截图 2025-04-02 232013](../assets/屏幕截图 2025-04-02 232013.png)
 
 
 
 思路梳理：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-02 233151.png" alt="屏幕截图 2025-04-02 233151" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-02 233151.png" alt="屏幕截图 2025-04-02 233151" style="zoom:75%;" />
 
 
 
@@ -1199,7 +1199,7 @@ advanced packaging tools
 
 原理示意图：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 080405.png" alt="屏幕截图 2025-04-03 080405" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-03 080405.png" alt="屏幕截图 2025-04-03 080405" style="zoom:75%;" />
 
 
 
@@ -1271,7 +1271,7 @@ ssh是Secure Shell 的缩写，是建立在应用层和传输层基础上的安�
 
 有一个rsyslogd后台程序（服务）帮我们记录日志信息。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 092119.png" alt="屏幕截图 2025-04-03 092119" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-03 092119.png" alt="屏幕截图 2025-04-03 092119" style="zoom:75%;" />
 
 ## 日志服务配置文件
 
@@ -1283,11 +1283,11 @@ ssh是Secure Shell 的缩写，是建立在应用层和传输层基础上的安�
 
 可以在`/etc/rsyslog.d/50-default.conf`中查看日志记录默认规则
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 092427.png" alt="屏幕截图 2025-04-03 092427" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-03 092427.png" alt="屏幕截图 2025-04-03 092427" style="zoom: 67%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 092444.png" alt="屏幕截图 2025-04-03 092444" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-03 092444.png" alt="屏幕截图 2025-04-03 092444" style="zoom:67%;" />
 
 ## 自定义日志服务
 
@@ -1299,23 +1299,23 @@ ssh是Secure Shell 的缩写，是建立在应用层和传输层基础上的安�
 
 ## 日志轮替
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 101459.png" alt="屏幕截图 2025-04-03 101459" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-03 101459.png" alt="屏幕截图 2025-04-03 101459" style="zoom:75%;" />
 
 
 
 
 
-![屏幕截图 2025-04-03 101822](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 101822.png)
+![屏幕截图 2025-04-03 101822](../assets/屏幕截图 2025-04-03 101822.png)
 
 
 
-![屏幕截图 2025-04-03 102649](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 102649.png)
+![屏幕截图 2025-04-03 102649](../assets/屏幕截图 2025-04-03 102649.png)
 
 
 
 日志轮替机制：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 103036.png" alt="屏幕截图 2025-04-03 103036" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-03 103036.png" alt="屏幕截图 2025-04-03 103036" style="zoom:75%;" />
 
 
 
@@ -1325,7 +1325,7 @@ ssh是Secure Shell 的缩写，是建立在应用层和传输层基础上的安�
 
 有些内存在系统运行时是写在内存中，没有写到文件中，比如内核相关的日志。重启会清空
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 104036.png" alt="屏幕截图 2025-04-03 104036" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-03 104036.png" alt="屏幕截图 2025-04-03 104036" style="zoom:75%;" />
 
 
 
@@ -1333,7 +1333,7 @@ ssh是Secure Shell 的缩写，是建立在应用层和传输层基础上的安�
 
 Linux启动流程：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 105853.png" alt="屏幕截图 2025-04-03 105853" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-03 105853.png" alt="屏幕截图 2025-04-03 105853" style="zoom: 67%;" />
 
 
 
@@ -1425,7 +1425,7 @@ sudo dump -0uj /backup/home.dump.gz /home
 
 ## 恢复
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-03 131122.png" alt="屏幕截图 2025-04-03 131122" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-03 131122.png" alt="屏幕截图 2025-04-03 131122" style="zoom:75%;" />
 
 在使用 `restore` 恢复数据之前，运行 `restore -Cf` 可以帮助你确认备份文件是否完好无损，避免在恢复过程中遇到问题。
 

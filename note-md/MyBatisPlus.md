@@ -83,7 +83,7 @@
 
 ## 常见配置
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 111217.png" alt="屏幕截图 2025-04-05 111217"  />
+<img src="../assets/屏幕截图 2025-04-05 111217.png" alt="屏幕截图 2025-04-05 111217"  />
 
 - 别名扫描包指定的包应为pojo所在包，其中包的别名默认为类名（不包含包的全路径）。这样在使用时会方便很多。
 
@@ -101,7 +101,7 @@ MybatisPlus支持各种复杂的where条件，可以满足日常开发的所有�
 
 wrapper的体系结构：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 115515.png" alt="屏幕截图 2025-04-05 115515" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-05 115515.png" alt="屏幕截图 2025-04-05 115515" style="zoom:75%;" />
 
 下面来演示其中UpdateWrapper和QueryWrapper两个条件构造器的使用
 
@@ -109,7 +109,7 @@ wrapper的体系结构：
 
 需求以及原本的sql语句实现：
 
-![屏幕截图 2025-04-05 115634](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 115634.png)
+![屏幕截图 2025-04-05 115634](../assets/屏幕截图 2025-04-05 115634.png)
 
 使用mp：
 
@@ -126,7 +126,7 @@ users.forEach(System.out::println);
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 115640.png" alt="屏幕截图 2025-04-05 115640" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-05 115640.png" alt="屏幕截图 2025-04-05 115640" style="zoom:75%;" />
 
 
 
@@ -147,7 +147,7 @@ userMapper.update(user,wrapper);
 
 - UpdateWrapper
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 120539.png" alt="屏幕截图 2025-04-05 120539" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-05 120539.png" alt="屏幕截图 2025-04-05 120539" style="zoom:75%;" />
 
 使用mp：
 
@@ -205,7 +205,7 @@ users.forEach(System.out::println);
 
 示例：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 124356.png" alt="屏幕截图 2025-04-05 124356" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-05 124356.png" alt="屏幕截图 2025-04-05 124356" style="zoom:75%;" />
 
 这就保证了不在业务层编写sql，遵循了企业规范，同时又用mp简化了代码开发。
 
@@ -312,11 +312,11 @@ void testSaveUser(){
 ## Lambda方法
 
 x示例：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 135514.png" alt="屏幕截图 2025-04-05 135514" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-05 135514.png" alt="屏幕截图 2025-04-05 135514" style="zoom:75%;" />
 
 mybatis原生写法:
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 135525.png" alt="屏幕截图 2025-04-05 135525" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-05 135525.png" alt="屏幕截图 2025-04-05 135525" style="zoom:75%;" />
 
 lambda查询写法：
 
@@ -381,19 +381,19 @@ lambda主要用于复杂条件。
 
 - 普通for循环插入
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 151743.png" alt="屏幕截图 2025-04-05 151743" style="zoom:75%;" />
+  <img src="../assets/屏幕截图 2025-04-05 151743.png" alt="屏幕截图 2025-04-05 151743" style="zoom:75%;" />
 
   这种方法每插入一条都要发一次网络请求，但网络请求是比较慢的，就造成了这种方式很慢
 
 - 默认情况下mp的批量新增：
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 151755.png" alt="屏幕截图 2025-04-05 151755" style="zoom:75%;" />
+  <img src="../assets/屏幕截图 2025-04-05 151755.png" alt="屏幕截图 2025-04-05 151755" style="zoom:75%;" />
 
   ​	这样虽然1000条才发一次网络请求，但每次新增仍然是一条sql语句。
 
   ​	我们想要如下格式来增加性能：
 
-  ​	<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-05 152014.png" alt="屏幕截图 2025-04-05 152014" style="zoom:75%;" />
+  ​	<img src="../assets/屏幕截图 2025-04-05 152014.png" alt="屏幕截图 2025-04-05 152014" style="zoom:75%;" />
 
 - 在jdbc的url中添加参数`rewriteBatchedStatements=true`即可
 
@@ -477,11 +477,11 @@ UserServiceImpl中的方法：
 - 当删除数据时把标记设置为1
 - 查询时只查询标记为0的数据
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-06 102046.png" alt="屏幕截图 2025-04-06 102046" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-06 102046.png" alt="屏幕截图 2025-04-06 102046" style="zoom:67%;" />
 
 我们发现如果这样，那增删改查都需要加上deleted条件，而mp本身并没有给我们提供加上了deleted条件的方法。那这样mp就不能用了吗？
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-06 102220.png" alt="屏幕截图 2025-04-06 102220" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-06 102220.png" alt="屏幕截图 2025-04-06 102220" style="zoom: 67%;" />
 
 接下来再调用removeById方法，执行的就是将flag改为1，而不是直接删除记录。
 
@@ -584,7 +584,7 @@ public class UserService {
 
 - 加上配置启用handler。
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-06 105255.png" alt="屏幕截图 2025-04-06 105255" style="zoom:75%;" />
+  <img src="../assets/屏幕截图 2025-04-06 105255.png" alt="屏幕截图 2025-04-06 105255" style="zoom:75%;" />
 
 - 在给前端返回时，默认返回的时枚举项的名字，要想返回枚举项的某一个成员变量，给枚举类中的对应成员变量加上`@JsonValue`注解。
 
@@ -613,7 +613,7 @@ public class UserService {
 
 # 插件功能
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-06 120831.png" alt="屏幕截图 2025-04-06 120831" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-06 120831.png" alt="屏幕截图 2025-04-06 120831" style="zoom: 67%;" />
 
 
 
@@ -672,11 +672,11 @@ void testPageQuery(){
 
 
 需求：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-06 130303.png" alt="屏幕截图 2025-04-06 130303" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-06 130303.png" alt="屏幕截图 2025-04-06 130303" style="zoom:75%;" />
 
 返回值：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-06 130310.png" alt="屏幕截图 2025-04-06 130310" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-06 130310.png" alt="屏幕截图 2025-04-06 130310" style="zoom:75%;" />
 
 **先定义查询条件的实体**
 
@@ -783,7 +783,7 @@ UserServiceImpl:
 并且3过程也可以封装。
 
 所以需求如下：
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-04-06 133530.png" alt="屏幕截图 2025-04-06 133530" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-04-06 133530.png" alt="屏幕截图 2025-04-06 133530" style="zoom:75%;" />
 
 
 

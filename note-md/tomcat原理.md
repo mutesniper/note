@@ -14,7 +14,7 @@
 
 # Server.xml内容（tomcat结构）
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 133114.png" alt="屏幕截图 2025-04-19 133114" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-19 133114.png" alt="屏幕截图 2025-04-19 133114" style="zoom: 50%;" />
 
 这是一个树形目录，根节点是`server`，server就是tomcat所对应的类，它只会被实例化一次。
 
@@ -46,13 +46,13 @@
 
 - 在配置文件中，应该指定虚拟主机的主机名以及它内容所存放的文件夹（比如webapps存放默认，再创建一个wptwebapps文件夹用于存放新的虚拟主机内容）
 
-  <img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 134548.png" alt="屏幕截图 2025-04-19 134548" style="zoom: 67%;" />
+  <img src="../assets/屏幕截图 2025-04-19 134548.png" alt="屏幕截图 2025-04-19 134548" style="zoom: 67%;" />
 
 - 为了使得浏览器在输入`www.captainjack.com`主机名时访问本机的IP地址，需要在`C:\Windows\System32\drivers\etc`文件夹下的hosts文件中加入`127.0.0.1 www.captainjack.com`,用来在本地进行域名解析。
 
   这样一来，无论是输入`localhost`还是`www.captainjack.com`都会被解析为127.0.0.1，
 
-  <img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 134919.png" alt="屏幕截图 2025-04-19 134919" style="zoom: 33%;" />
+  <img src="../assets/屏幕截图 2025-04-19 134919.png" alt="屏幕截图 2025-04-19 134919" style="zoom: 33%;" />
 
   也就是说，我们通过访问相同的IP地址和相同的端口号，访问到了两个不同的虚拟主机，这是怎么做到的呢?
 
@@ -68,7 +68,7 @@
 
 在配置文件中，要将应用作为主机的子节点：
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 135741.png" alt="屏幕截图 2025-04-19 135741" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-19 135741.png" alt="屏幕截图 2025-04-19 135741" style="zoom: 50%;" />
 
 两个关键参数：
 
@@ -79,7 +79,7 @@
 
 一个context又包含多个不同的servlet，每一个servlet可以有一个或多个实例，同一个servlet的所有实例会被放在容器wrapper中进行管理。
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 140203.png" alt="屏幕截图 2025-04-19 140203" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-04-19 140203.png" alt="屏幕截图 2025-04-19 140203" style="zoom: 50%;" />
 
 在这里，engine、host、context、wrapper都是容器，通过容器，电脑上的servlet被进行了详细的分类管理。
 
@@ -105,11 +105,11 @@ Tomcat 连接器框架——[Coyote](https://zhida.zhihu.com/search?content_id=1
 
 为满足连接器的两个核心功能，我们需要一个通讯端点来监听端口；需要一个处理器来处理网络字节流；最后还需要一个适配器将处理后的结果转成容器需要的结构。
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 141101.png" alt="屏幕截图 2025-04-19 141101" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-19 141101.png" alt="屏幕截图 2025-04-19 141101" style="zoom: 67%;" />
 
 对应的源码包路径 `org.apache.coyote` 。对应的结构图如下
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 141107-1745050133120.png" alt="屏幕截图 2025-04-19 141107" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-04-19 141107-1745050133120.png" alt="屏幕截图 2025-04-19 141107" style="zoom: 67%;" />
 
 
 
@@ -123,17 +123,17 @@ Tomcat 容器框架——[Catalina](https://zhida.zhihu.com/search?content_id=16
 
 每个 Service 会包含一个容器。容器有一个引擎可以管理多个虚拟主机。每个虚拟主机可以管理多个 Web 应用。每个 Web 应用会有多个 Servlet 包装器。Engine、Host、Context 和 Wrapper，四个容器之间属于父子关系。
 
-<img src="C:\Users\14693\Desktop\note\assets\v2-be875676edea11c75bb86e4ccdef35f9_1440w.jpg" alt="img" style="zoom: 80%;" />
+<img src="..\assets\v2-be875676edea11c75bb86e4ccdef35f9_1440w.jpg" alt="img" style="zoom: 80%;" />
 
 对应的源码包路径 `org.apache.coyote` 。对应的结构图如下
 
-<img src="C:\Users\14693\Desktop\note\assets\v2-ac73403bc24ad4f16fee47cd87a5ea45_1440w.jpg" alt="img" style="zoom:80%;" />
+<img src="..\assets\v2-ac73403bc24ad4f16fee47cd87a5ea45_1440w.jpg" alt="img" style="zoom:80%;" />
 
 ### 容器请求处理
 
 容器的请求处理过程就是在 Engine、Host、Context 和 Wrapper 这四个容器之间层层调用，最后在 Servlet 中执行对应的业务逻辑。各容器都会有一个通道 Pipeline，每个通道上都会有一个 Basic Valve（如StandardEngineValve）， 类似一个闸门用来处理 Request 和 Response 。其流程图如下。
 
-<img src="C:\Users\14693\Desktop\note\assets\屏幕截图 2025-04-19 141107-1745050631554.png" alt="屏幕截图 2025-04-19 141107" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-04-19 141107-1745050631554.png" alt="屏幕截图 2025-04-19 141107" style="zoom:67%;" />
 
 # SpringBoot如何启动内嵌的Tomcat
 

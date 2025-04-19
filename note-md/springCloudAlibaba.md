@@ -31,21 +31,21 @@
 
 ## 单体架构
 
-![屏幕截图 2025-03-23 161347](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 161347.png)
+![屏幕截图 2025-03-23 161347](../assets/屏幕截图 2025-03-23 161347.png)
 
 
 
 ## 集群架构
 
-![屏幕截图 2025-03-23 161416](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 161416.png)
+![屏幕截图 2025-03-23 161416](../assets/屏幕截图 2025-03-23 161416.png)
 
 
 
 ## 分布式架构
 
-![屏幕截图 2025-03-23 161540](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 161540.png)
+![屏幕截图 2025-03-23 161540](../assets/屏幕截图 2025-03-23 161540.png)
 
-![屏幕截图 2025-03-23 161547](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 161547.png)
+![屏幕截图 2025-03-23 161547](../assets/屏幕截图 2025-03-23 161547.png)
 
 
 
@@ -57,7 +57,7 @@
 
 ### 服务注册
 
-![屏幕截图 2025-03-23 172203](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 172203.png)
+![屏幕截图 2025-03-23 172203](../assets/屏幕截图 2025-03-23 172203.png)
 
 在service-order模块的application.properties中加上
 
@@ -80,7 +80,7 @@ spring.cloud.nacos.server-addr=127.0.0.1:8848
 
 即获取注册中心所有的微服 务及其信息
 
-![屏幕截图 2025-03-23 172211](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 172211.png)
+![屏幕截图 2025-03-23 172211](../assets/屏幕截图 2025-03-23 172211.png)
 
 ```java
 @SpringBootTest
@@ -111,13 +111,13 @@ public class DiscovertyTest {
 
 远程调用基本流程：
 
-![屏幕截图 2025-03-23 200647](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 200647.png)
+![屏幕截图 2025-03-23 200647](../assets/屏幕截图 2025-03-23 200647.png)
 
 
 
 下面用一个订单-商品业务简单实现API，基本流程如下：
 
-![屏幕截图 2025-03-23 200655](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 200655.png)
+![屏幕截图 2025-03-23 200655](../assets/屏幕截图 2025-03-23 200655.png)
 
 
 
@@ -285,7 +285,7 @@ public class Product {
 
 步骤：
 
-![屏幕截图 2025-03-23 200823](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 200823.png)
+![屏幕截图 2025-03-23 200823](../assets/屏幕截图 2025-03-23 200823.png)
 
 
 
@@ -360,7 +360,7 @@ public class Product {
 
 ### 基本使用
 
-![屏幕截图 2025-03-23 210150](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 210150.png)
+![屏幕截图 2025-03-23 210150](../assets/屏幕截图 2025-03-23 210150.png)
 
 
 
@@ -506,7 +506,7 @@ public class Product {
   - 区分多种配置
   - 按需加载配置
 
-  <img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 215635.png" alt="屏幕截图 2025-03-23 215635" style="zoom:67%;" />
+  <img src="../assets/屏幕截图 2025-03-23 215635.png" alt="屏幕截图 2025-03-23 215635" style="zoom:67%;" />
 
 一个namespace对应一种开发环境、一个group对应一个微服务（order、product）。
 
@@ -565,7 +565,7 @@ spring:
 
 ## 总结
 
-![屏幕截图 2025-03-23 223552](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-23 223552.png)
+![屏幕截图 2025-03-23 223552](../assets/屏幕截图 2025-03-23 223552.png)
 
 
 
@@ -741,7 +741,7 @@ public class WeatherTest {
 
 客户端负载均衡与服务端负载均衡区别
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 083535.png" alt="屏幕截图 2025-03-30 083535" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-03-30 083535.png" alt="屏幕截图 2025-03-30 083535" style="zoom:67%;" />
 
 
 
@@ -779,7 +779,7 @@ logging:
 
 超时又分两种：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 085338.png" alt="屏幕截图 2025-03-30 085338" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-30 085338.png" alt="屏幕截图 2025-03-30 085338" style="zoom: 67%;" />
 
 
 
@@ -907,7 +907,7 @@ public Product getProduct(@PathVariable("id") Long id,
 
 ### *Fallback(兜底返回)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 100855.png" alt="屏幕截图 2025-03-30 100855" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 100855.png" alt="屏幕截图 2025-03-30 100855" style="zoom:75%;" />
 
 下面进行测试:
 
@@ -971,16 +971,16 @@ feign:
 
 架构原理：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 103855.png" alt="屏幕截图 2025-03-30 103855" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 103855.png" alt="屏幕截图 2025-03-30 103855" style="zoom:75%;" />
 
 资源&规则
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 103946.png" alt="屏幕截图 2025-03-30 103946" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 103946.png" alt="屏幕截图 2025-03-30 103946" style="zoom:75%;" />
 
 
 
 工作原理
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 103952.png" alt="屏幕截图 2025-03-30 103952" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 103952.png" alt="屏幕截图 2025-03-30 103952" style="zoom:75%;" />
 
 
 
@@ -1033,11 +1033,11 @@ spring:
 
 现在我们对create资源设置流控规则来进行演示
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 112050.png" alt="屏幕截图 2025-03-30 112050" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-03-30 112050.png" alt="屏幕截图 2025-03-30 112050" style="zoom:67%;" />
 
 代表每秒最多一个请求，如果我们快速刷新以模拟快速请求：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 112124.png" alt="屏幕截图 2025-03-30 112124" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 112124.png" alt="屏幕截图 2025-03-30 112124" style="zoom:75%;" />
 
 被阻塞的请求不会执行目标方法，那么就不会占用系统资源，即使高并发的场景，只有少量的目标方法执行并占用系统资源，那么就不会导致服务雪崩的问题。
 
@@ -1053,7 +1053,7 @@ spring:
 }
 ```
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 133627.png" alt="屏幕截图 2025-03-30 133627" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-30 133627.png" alt="屏幕截图 2025-03-30 133627" style="zoom: 67%;" />
 
 其中@SentinelResoruce标注在非controller层
 
@@ -1211,7 +1211,7 @@ try (Entry entry = SphU.entry("resourceName")) {
 
 ## 流控规则
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 143428.png" alt="屏幕截图 2025-03-30 143428" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 143428.png" alt="屏幕截图 2025-03-30 143428" style="zoom:75%;" />
 
 - 针对来源：表示对何种来源的请求进行限制
 
@@ -1227,7 +1227,7 @@ try (Entry entry = SphU.entry("resourceName")) {
 
 调用关系包括调用方、被调用方；一个方法又可能会调用其它方法，形成一个调用链路的层次关系；有了调用链路的统计信息，我们可以衍生出多种流量控制手段。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 152252.png" alt="屏幕截图 2025-03-30 152252" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 152252.png" alt="屏幕截图 2025-03-30 152252" style="zoom:75%;" />
 
 ​		**直接策略：**只对此资源生效
 
@@ -1250,7 +1250,7 @@ public Order seckill(@RequestParam("userId") Long userId,
 
 ​		然后在sentinel中对createOrder进行流控，仅限制通过/seckill资源访问createOrder的链路:
 
-​		<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 153604.png" alt="屏幕截图 2025-03-30 153604" style="zoom:75%;" />
+​		<img src="../assets/屏幕截图 2025-03-30 153604.png" alt="屏幕截图 2025-03-30 153604" style="zoom:75%;" />
 
 ​		这样就做到了对不同链路实现不同的规则
 
@@ -1271,7 +1271,7 @@ public String readDb(){
 }
 ```
 
-​		<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 154457.png" alt="屏幕截图 2025-03-30 154457" style="zoom:75%;" />
+​		<img src="../assets/屏幕截图 2025-03-30 154457.png" alt="屏幕截图 2025-03-30 154457" style="zoom:75%;" />
 
 那么，在write访问量超出阈值时，readDb无法正常访问，但writeDb本身没受影响。
 
@@ -1297,7 +1297,7 @@ public String readDb(){
 
 
 
-![屏幕截图 2025-03-31 214742](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 214742.png)
+![屏幕截图 2025-03-31 214742](../assets/屏幕截图 2025-03-31 214742.png)
 
 
 
@@ -1324,7 +1324,7 @@ public String readDb(){
    - 在这个状态下，熔断器允许部分请求通过以测试目标服务是否恢复正常。
    - 如果这些请求成功，则熔断器切换回关闭状态；如果仍然失败，则再次切换到打开状态，并重新计时冷却期。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 171004.png" alt="屏幕截图 2025-03-30 171004" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 171004.png" alt="屏幕截图 2025-03-30 171004" style="zoom:75%;" />
 
 
 
@@ -1334,7 +1334,7 @@ public String readDb(){
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 171621.png" alt="屏幕截图 2025-03-30 171621" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 171621.png" alt="屏幕截图 2025-03-30 171621" style="zoom:75%;" />
 
 最大RT：最大响应时间（response time）
 
@@ -1354,7 +1354,7 @@ public String readDb(){
 
 
 
-![屏幕截图 2025-03-31 214921](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 214921.png)
+![屏幕截图 2025-03-31 214921](../assets/屏幕截图 2025-03-31 214921.png)
 
 
 
@@ -1401,15 +1401,15 @@ public Order seckillFallback(@RequestParam("userId") Long userId,
 
 给seckill起名为seckill-order，并启用兜底
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 181143.png" alt="屏幕截图 2025-03-30 181143" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-30 181143.png" alt="屏幕截图 2025-03-30 181143" style="zoom: 67%;" />
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 181135.png" alt="屏幕截图 2025-03-30 181135" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-03-30 181135.png" alt="屏幕截图 2025-03-30 181135" style="zoom:67%;" />
 
 如上两个热点参数限流，可以实现要求的效果
 
-![屏幕截图 2025-03-31 215016](C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 215016.png)
+![屏幕截图 2025-03-31 215016](../assets/屏幕截图 2025-03-31 215016.png)
 
 
 
@@ -1505,7 +1505,7 @@ spring:
 
 # Gateway
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 191357.png" alt="屏幕截图 2025-03-30 191357" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-03-30 191357.png" alt="屏幕截图 2025-03-30 191357" style="zoom:67%;" />
 
 作为系统的入口点，它负责接收所有的客户端请求，并将这些请求路由到后端的适当微服务。
 
@@ -1567,7 +1567,7 @@ public class GatewayMainApplication {
 
 需求：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 224646.png" alt="屏幕截图 2025-03-30 224646" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 224646.png" alt="屏幕截图 2025-03-30 224646" style="zoom:75%;" />
 
 
 
@@ -1621,7 +1621,7 @@ cloud提供了两种方式配置路由规则：
 
 ### 工作原理
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-30 232352.png" alt="屏幕截图 2025-03-30 232352" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-30 232352.png" alt="屏幕截图 2025-03-30 232352" style="zoom:75%;" />
 
 其中断言是从上往下进行匹配的，上面的匹配上了，就不会再继续向下匹配。但是还有一个order配置参数，用来指定断言匹配的顺序。
 
@@ -1664,7 +1664,7 @@ predicates:
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 085727.png" alt="屏幕截图 2025-03-31 085727" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-31 085727.png" alt="屏幕截图 2025-03-31 085727" style="zoom:75%;" />
 
 下面以Query为例演示：
 
@@ -1785,7 +1785,7 @@ public class VipRoutePredicateFactory extends AbstractRoutePredicateFactory<VipR
 
 参考[GatewayFilter Factories :: Spring Cloud Gateway](https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway/gatewayfilter-factories.html)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 112004.png" alt="屏幕截图 2025-03-31 112004" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-31 112004.png" alt="屏幕截图 2025-03-31 112004" style="zoom:75%;" />
 
 
 
@@ -1797,7 +1797,7 @@ public class VipRoutePredicateFactory extends AbstractRoutePredicateFactory<VipR
 
 所以我们通过RewritePathGateFilterFactory实现如下效果:
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 112734.png" alt="屏幕截图 2025-03-31 112734" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-31 112734.png" alt="屏幕截图 2025-03-31 112734" style="zoom:75%;" />
 
 
 
@@ -2008,7 +2008,7 @@ spring:
 
 # Seata
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 174553.png" alt="屏幕截图 2025-03-31 174553" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-03-31 174553.png" alt="屏幕截图 2025-03-31 174553" style="zoom: 50%;" />
 
 分布式事务的产生原因：
 
@@ -2028,7 +2028,7 @@ Seata就提供了在分布式系统下保证多个数据库一起提交回滚，
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 175109.png" alt="屏幕截图 2025-03-31 175109"  />
+<img src="../assets/屏幕截图 2025-03-31 175109.png" alt="屏幕截图 2025-03-31 175109"  />
 
 每一个微服务事务和全局事务启动时，都要向TC去注册自己的事务，而且每一个事务的状态也要汇报给TC。
 
@@ -2093,11 +2093,11 @@ service {
 
 ### 二阶提交协议流程
 
-![SpringCloud-第 2 页.drawio](C:\Users\14693\Desktop\Screenshots\SpringCloud-第 2 页.drawio.png)
+![SpringCloud-第 2 页.drawio](../assets/SpringCloud-第 2 页.drawio.png)
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 190657.png" alt="屏幕截图 2025-03-31 190657" style="zoom:67%;" />
+<img src="../assets/屏幕截图 2025-03-31 190657.png" alt="屏幕截图 2025-03-31 190657" style="zoom:67%;" />
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-31 190705.png" alt="屏幕截图 2025-03-31 190705" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-31 190705.png" alt="屏幕截图 2025-03-31 190705" style="zoom: 67%;" />
 
 
 

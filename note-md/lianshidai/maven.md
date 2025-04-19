@@ -169,7 +169,7 @@ mvn install  安装到本地仓库
 - 测试程序范围有效（test文件夹范围内）
 - 是否参与打包（package指令范围内）
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-05 104721.png" alt="屏幕截图 2025-03-05 104721" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-05 104721.png" alt="屏幕截图 2025-03-05 104721" style="zoom:75%;" />
 
 
 
@@ -177,7 +177,7 @@ mvn install  安装到本地仓库
 
 比如在项目二中将mybatis依赖设置一个scope，那么在项目一中把项目二添加为依赖，在项目一中mybatis的scope如下表：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-05 105041.png" alt="屏幕截图 2025-03-05 105041" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-05 105041.png" alt="屏幕截图 2025-03-05 105041" style="zoom:75%;" />
 
 
 

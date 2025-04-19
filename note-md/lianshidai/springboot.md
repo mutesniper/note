@@ -68,7 +68,7 @@ SpringBoot场景启动器：官方写的启动器命名：`spring-boot-starter-*
 
 导入starter、修改配置文件，就能修改底层行为。
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-12 151445.png" alt="屏幕截图 2025-03-12 151445" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-12 151445.png" alt="屏幕截图 2025-03-12 151445" style="zoom:75%;" />
 
 
 
@@ -196,7 +196,7 @@ logging.level.biz=级别
 
 ```
 
-SpringBoot 预定义两个组:<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-12 165936.png" alt="屏幕截图 2025-03-12 165936" style="zoom:75%;" />
+SpringBoot 预定义两个组:<img src="../assets/屏幕截图 2025-03-12 165936.png" alt="屏幕截图 2025-03-12 165936" style="zoom:75%;" />
 
 
 
@@ -218,7 +218,7 @@ logging.file.name=boot.log
 **归档**：每天的日志单独存到一个文档中。
 **切割**：每个文件10MB，超过大小切割成另外一个文件。
 
-默认滚动切割与归档规则如下：<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-12 171015.png" alt="屏幕截图 2025-03-12 171015" style="zoom:75%;" />
+默认滚动切割与归档规则如下：<img src="../assets/屏幕截图 2025-03-12 171015.png" alt="屏幕截图 2025-03-12 171015" style="zoom:75%;" />
 
 
 
@@ -228,7 +228,7 @@ logging.file.name=boot.log
 
 ## 自定义配置
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-12 172014.png" alt="屏幕截图 2025-03-12 172014" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-12 172014.png" alt="屏幕截图 2025-03-12 172014" style="zoom:75%;" />
 
 
 
@@ -316,7 +316,7 @@ Assertions.断言方法（）
 
 
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-12 211524.png" alt="屏幕截图 2025-03-12 211524" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-03-12 211524.png" alt="屏幕截图 2025-03-12 211524" style="zoom: 50%;" />
 
 
 

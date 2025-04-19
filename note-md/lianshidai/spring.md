@@ -976,7 +976,7 @@ public class MyTestBeanPostProcessor implements BeanPostProcessor {
 
 ### 小结
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-06 155252.png" alt="屏幕截图 2025-03-06 155252" style="zoom:150%;" />
+<img src="../assets/屏幕截图 2025-03-06 155252.png" alt="屏幕截图 2025-03-06 155252" style="zoom:150%;" />
 
 
 
@@ -1283,7 +1283,7 @@ public class MathTest {
 
 ## AOP专业术语
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-06 225302.png" alt="屏幕截图 2025-03-06 225302" style="zoom: 50%;" />
+<img src="../assets/屏幕截图 2025-03-06 225302.png" alt="屏幕截图 2025-03-06 225302" style="zoom: 50%;" />
 
 
 
@@ -1520,7 +1520,7 @@ public class AuthAspect {
 
 可以用一个图来表示：
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-07 092036.png" alt="屏幕截图 2025-03-07 092036" style="zoom: 67%;" />
+<img src="../assets/屏幕截图 2025-03-07 092036.png" alt="屏幕截图 2025-03-07 092036" style="zoom: 67%;" />
 
 可以用@order（数字）决定切面优先级顺序 , 数字越小优先级越高。对应的切面也就在上图的越外层
 
@@ -1731,7 +1731,7 @@ mysql默认REPEATABLE_READ
 
 ### propagation传播行为
 
-<img src="C:\Users\14693\Desktop\Screenshots\屏幕截图 2025-03-07 162131.png" alt="屏幕截图 2025-03-07 162131" style="zoom:75%;" />
+<img src="../assets/屏幕截图 2025-03-07 162131.png" alt="屏幕截图 2025-03-07 162131" style="zoom:75%;" />
 
 比如在checkout方法（已开启事务）中给扣除金额的方法设置REQUIRED_NEW，给减少库存的方法设置REQUIRED，那么当check事务回滚时，金额不回滚，库存回滚。
 
